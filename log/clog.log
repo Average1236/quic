@@ -1,0 +1,731 @@
+[2025/04/18 15:07:47 538881] [connection_state_updated] |scid:ba8cecc594a8139a|xqc_conn_create|new:C_INIT|
+[2025/04/18 15:07:47 538976] [rec_parameters_set] |scid:ba8cecc594a8139a|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/18 15:07:47 538995] [path_assigned] |scid:ba8cecc594a8139a|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:ece5cf0a9cd1d8c3|scid:ba8cecc594a8139a|
+[2025/04/18 15:07:47 539003] [tra_parameters_set] |scid:ba8cecc594a8139a|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/18 15:07:47 539171] [connection_started] |scid:ba8cecc594a8139a|xqc_client_connect|remote|dst_ip:127.0.0.1|dst_port:8443|scid:ba8cecc594a8139a|dcid:ece5cf0a9cd1d8c3|
+[2025/04/18 15:07:47 539229] [http_parameters_set] |scid:ba8cecc594a8139a|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/18 15:07:47 539247] [http_stream_type_set] |scid:ba8cecc594a8139a|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/18 15:07:47 539259] [stream_data_moved] |scid:ba8cecc594a8139a|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000564063EC991C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/18 15:07:47 539273] [http_stream_type_set] |scid:ba8cecc594a8139a|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/18 15:07:47 539280] [stream_data_moved] |scid:ba8cecc594a8139a|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000564063EC991C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/18 15:07:47 539290] [http_stream_type_set] |scid:ba8cecc594a8139a|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/18 15:07:47 539296] [stream_data_moved] |scid:ba8cecc594a8139a|xqc_stream_send|ret:-610|stream_id:10|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000564063EC991C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/18 15:07:47 539307] [http_frame_created] |scid:ba8cecc594a8139a|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/18 15:07:47 539314] [stream_data_moved] |scid:ba8cecc594a8139a|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000564063EC991C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/18 15:07:47 539332] [connection_state_updated] |scid:ba8cecc594a8139a|xqc_crypto_stream_on_write|new:C_INITIAL_SENT|
+[2025/04/18 15:07:47 539377] [datagrams_sent] |scid:ba8cecc594a8139a|xqc_send|size:1216|path_id:0|
+[2025/04/18 15:07:47 539386] [packet_sent] |scid:ba8cecc594a8139a|xqc_send_packet_with_pn|<==|conn:0000564063EC991C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:0|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1744960067539350|stream_id:0|stream_offset:0|
+[2025/04/18 15:07:47 539395] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744960068289350|interv:749956|
+[2025/04/18 15:07:47 539436] [http_stream_type_set] |scid:ba8cecc594a8139a|xqc_h3_stream_create|local|stream_id:0|stream_type:16|
+[2025/04/18 15:07:47 539466] [stream_data_moved] |scid:ba8cecc594a8139a|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000564063EC991C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/18 15:07:47 539477] [http_frame_created] |scid:ba8cecc594a8139a|xqc_h3_stream_write_headers|stream_id:0|type:1|{name::method} {value:GET}|{name::scheme} {value:https}|{name::path}|{name:host} {value:test.xquic.com}|{name:content-type} {value:text/plain}|{name:content-length}|
+[2025/04/18 15:07:47 539491] [stream_data_moved] |scid:ba8cecc594a8139a|xqc_stream_send|ret:-610|stream_id:0|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:2|offset:0|fin:0|stream_flag:17|conn:0000564063EC991C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/18 15:07:48 290591] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_expire|event_type:expired|type:LOSS_DETECTION|expire_time:1744960068289350|
+[2025/04/18 15:07:48 290703] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744960069790702|interv:1500000|
+[2025/04/18 15:07:48 290768] [datagrams_sent] |scid:ba8cecc594a8139a|xqc_send|size:1216|path_id:0|
+[2025/04/18 15:07:48 290782] [packet_sent] |scid:ba8cecc594a8139a|xqc_send_packet_with_pn|<==|conn:0000564063EC991C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:1|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1744960068290740|stream_id:0|stream_offset:0|
+[2025/04/18 15:07:48 290795] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744960069790740|interv:1499945|
+[2025/04/18 15:07:48 290815] [datagrams_sent] |scid:ba8cecc594a8139a|xqc_send|size:1216|path_id:0|
+[2025/04/18 15:07:48 290825] [packet_sent] |scid:ba8cecc594a8139a|xqc_send_packet_with_pn|<==|conn:0000564063EC991C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:2|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:1200|now:1744960068290809|stream_id:0|stream_offset:0|
+[2025/04/18 15:07:48 290835] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744960069790809|interv:1499974|
+[2025/04/18 15:07:49 792781] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_expire|event_type:expired|type:LOSS_DETECTION|expire_time:1744960069790809|
+[2025/04/18 15:07:49 792862] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744960071290809|interv:1497948|
+[2025/04/18 15:07:49 792912] [datagrams_sent] |scid:ba8cecc594a8139a|xqc_send|size:1216|path_id:0|
+[2025/04/18 15:07:49 792921] [packet_sent] |scid:ba8cecc594a8139a|xqc_send_packet_with_pn|<==|conn:0000564063EC991C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:3|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:1200|now:1744960069792888|stream_id:0|stream_offset:0|
+[2025/04/18 15:07:49 792932] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744960072792888|interv:2999956|
+[2025/04/18 15:07:49 792959] [datagrams_sent] |scid:ba8cecc594a8139a|xqc_send|size:1216|path_id:0|
+[2025/04/18 15:07:49 792977] [packet_sent] |scid:ba8cecc594a8139a|xqc_send_packet_with_pn|<==|conn:0000564063EC991C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:4|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:2400|now:1744960069792951|stream_id:0|stream_offset:0|
+[2025/04/18 15:07:49 792995] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744960072792951|interv:2999957|
+[2025/04/18 15:07:52 796561] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_expire|event_type:expired|type:LOSS_DETECTION|expire_time:1744960072792951|
+[2025/04/18 15:07:52 796685] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744960075792951|interv:2996267|
+[2025/04/18 15:07:52 796755] [datagrams_sent] |scid:ba8cecc594a8139a|xqc_send|size:1216|path_id:0|
+[2025/04/18 15:07:52 796769] [packet_sent] |scid:ba8cecc594a8139a|xqc_send_packet_with_pn|<==|conn:0000564063EC991C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:5|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:3600|now:1744960072796725|stream_id:0|stream_offset:0|
+[2025/04/18 15:07:52 796783] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744960078796725|interv:5999942|
+[2025/04/18 15:07:52 796817] [datagrams_sent] |scid:ba8cecc594a8139a|xqc_send|size:1216|path_id:0|
+[2025/04/18 15:07:52 796826] [packet_sent] |scid:ba8cecc594a8139a|xqc_send_packet_with_pn|<==|conn:0000564063EC991C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:6|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:4800|now:1744960072796810|stream_id:0|stream_offset:0|
+[2025/04/18 15:07:52 796839] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744960078796810|interv:5999971|
+[2025/04/18 15:07:56 541737] [loss_timer_updated] |scid:ba8cecc594a8139a|xqc_timer_unset|event_type:cancel|type:LOSS_DETECTION|
+[2025/04/18 15:07:56 541841] [connection_state_updated] |scid:ba8cecc594a8139a|xqc_conn_immediate_close|new:CLOSING|
+[2025/04/18 15:07:56 554901] [datagrams_sent] |scid:ba8cecc594a8139a|xqc_send|size:1216|path_id:0|
+[2025/04/18 15:07:56 554971] [packet_sent] |scid:ba8cecc594a8139a|xqc_send_packet_with_pn|<==|conn:0000564063EC991C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:7|size:1200|frame_flag:PADDING CONNECTION_CLOSE |sent:1216|inflight:0|now:1744960076554875|stream_id:0|stream_offset:0|
+[2025/04/18 15:07:58 870427] [connection_state_updated] |scid:ba8cecc594a8139a|xqc_engine_process_conn|new:CLOSED|
+[2025/04/18 15:07:58 870642] [report] |scid:ba8cecc594a8139a|xqc_conn_destroy|0000564063EC991C|has_0rtt:0|0rtt_accept:0|token_ok:-1|handshake_time:0|first_send_delay:543|conn_persist:11331695|keyupdate_cnt:0|err:0x0|close_msg:local close|addr or cid not avail|hsk_recv:0|close_recv:0|close_send:9015928|last_recv:0|last_send:9015928|mp_enable:0|create:1|validated:1|active:1|path_info:0/0/0/a/0,1,1,1,0,0,0,0,0,0,0,8,0,0,0,0,0,i96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1200,21,6,5257,0,1200,40001,7,9015,0,1200,21,5,5257,0-2,0-2,0-0,0-0,0-0,0-250,0-9728,0-0,0-8,0-0,0-0,0-4,0-0,0-0,0-0,0-0,0-0,0-0|alpn:|rebind_count:0|rebind_valid:0|rtx_pkt:0|tlp_pkt:4|snd_pkt:8|spurious_loss:0|detected_loss:2|max_pto:3|finished_streams:0|cli_bidi_s:1|svr_bidi_s:0|fec_exist:0|fec_ensch:NO_FEC|fec_desch:NO_FEC|fec_neg_fail:0|fec_mp_mode:NO_FEC|send_fec_pkts:0|recovered_fec_num:0|max_po_size:1200|max_probing_size:1420|ppo_size:1420|
+[2025/04/18 15:07:58 870683] [connection_closed] |scid:ba8cecc594a8139a|xqc_conn_destroy|err_code:0|mtu_updatad_count:0|pkt_dropped:0|
+[2025/04/18 15:07:58 870749] [report] |scid:ba8cecc594a8139a|xqc_h3_request_destroy|stream_id:0|close_msg:conn closed|err:0|rcvd_bdy_sz:0|snd_bdy_sz:0|rcvd_hdr_sz:0|snd_hdr_sz:81|create:1744960067539449|blkd:0|nblkd:0|hdr_b:0|hdr_e:0|bdy_b:0|fin:0|recv_end:0|hrd_send:53|bdy_send:0|fin_send:0|fin_ack:0|last_send:9015426|last_recv:0|mp_state:0|path_info:(0,0,0/0/0/a/0,0,0,0,0,0)|comp_hdr_s:24|comp_hdr_r:0|fst_fin_snd:0|sched_blk:0|sched_blk_time:0|cwnd_blk:0|cwnd_blk_time:0|pacing_blk:0|pacing_blk_time:0|begin_state:(0,134,1,0,0,388393,250)|end_state:(0,134,0,0,0,388393,250)|is_fec_protected:0|fec_reco_pkt_cnt:0|fec_block_size_mode:0|fst_rpr_ts:0|last_rpr_ts:0|
+[2025/04/18 22:13:06 079705] [connection_state_updated] |scid:e593a5e5b72c8d5a|xqc_conn_create|new:C_INIT|
+[2025/04/18 22:13:06 081214] [rec_parameters_set] |scid:e593a5e5b72c8d5a|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/18 22:13:06 081262] [path_assigned] |scid:e593a5e5b72c8d5a|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:8fd94b1d6faac013|scid:e593a5e5b72c8d5a|
+[2025/04/18 22:13:06 081274] [tra_parameters_set] |scid:e593a5e5b72c8d5a|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/18 22:13:06 083106] [connection_started] |scid:e593a5e5b72c8d5a|xqc_client_connect|remote|dst_ip:127.0.0.1|dst_port:8443|scid:e593a5e5b72c8d5a|dcid:8fd94b1d6faac013|
+[2025/04/18 22:13:06 083201] [http_parameters_set] |scid:e593a5e5b72c8d5a|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/18 22:13:06 083256] [http_stream_type_set] |scid:e593a5e5b72c8d5a|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/18 22:13:06 083280] [stream_data_moved] |scid:e593a5e5b72c8d5a|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:000055E92D3CF91C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/18 22:13:06 083303] [http_stream_type_set] |scid:e593a5e5b72c8d5a|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/18 22:13:06 083313] [stream_data_moved] |scid:e593a5e5b72c8d5a|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:000055E92D3CF91C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/18 22:13:06 083327] [http_stream_type_set] |scid:e593a5e5b72c8d5a|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/18 22:13:06 083336] [stream_data_moved] |scid:e593a5e5b72c8d5a|xqc_stream_send|ret:-610|stream_id:10|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:000055E92D3CF91C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/18 22:13:06 083351] [http_frame_created] |scid:e593a5e5b72c8d5a|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/18 22:13:06 083361] [stream_data_moved] |scid:e593a5e5b72c8d5a|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:000055E92D3CF91C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/18 22:13:06 083404] [connection_state_updated] |scid:e593a5e5b72c8d5a|xqc_crypto_stream_on_write|new:C_INITIAL_SENT|
+[2025/04/18 22:13:06 083792] [datagrams_sent] |scid:e593a5e5b72c8d5a|xqc_send|size:1216|path_id:0|
+[2025/04/18 22:13:06 083842] [packet_sent] |scid:e593a5e5b72c8d5a|xqc_send_packet_with_pn|<==|conn:000055E92D3CF91C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:0|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1744985586083732|stream_id:0|stream_offset:0|
+[2025/04/18 22:13:06 083860] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744985586833732|interv:749873|
+[2025/04/18 22:13:06 083927] [http_stream_type_set] |scid:e593a5e5b72c8d5a|xqc_h3_stream_create|local|stream_id:0|stream_type:16|
+[2025/04/18 22:13:06 083996] [stream_data_moved] |scid:e593a5e5b72c8d5a|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:000055E92D3CF91C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/18 22:13:06 084010] [http_frame_created] |scid:e593a5e5b72c8d5a|xqc_h3_stream_write_headers|stream_id:0|type:1|{name::method} {value:GET}|{name::scheme} {value:https}|{name::path}|{name:host} {value:test.xquic.com}|{name:content-type} {value:text/plain}|{name:content-length}|
+[2025/04/18 22:13:06 084021] [stream_data_moved] |scid:e593a5e5b72c8d5a|xqc_stream_send|ret:-610|stream_id:0|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:2|offset:0|fin:0|stream_flag:17|conn:000055E92D3CF91C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/18 22:13:06 844084] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_expire|event_type:expired|type:LOSS_DETECTION|expire_time:1744985586833732|
+[2025/04/18 22:13:06 844218] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744985588344217|interv:1500001|
+[2025/04/18 22:13:06 844301] [datagrams_sent] |scid:e593a5e5b72c8d5a|xqc_send|size:1216|path_id:0|
+[2025/04/18 22:13:06 844315] [packet_sent] |scid:e593a5e5b72c8d5a|xqc_send_packet_with_pn|<==|conn:000055E92D3CF91C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:1|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1744985586844258|stream_id:0|stream_offset:0|
+[2025/04/18 22:13:06 844346] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744985588344258|interv:1499912|
+[2025/04/18 22:13:06 844365] [datagrams_sent] |scid:e593a5e5b72c8d5a|xqc_send|size:1216|path_id:0|
+[2025/04/18 22:13:06 844374] [packet_sent] |scid:e593a5e5b72c8d5a|xqc_send_packet_with_pn|<==|conn:000055E92D3CF91C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:2|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:1200|now:1744985586844359|stream_id:0|stream_offset:0|
+[2025/04/18 22:13:06 844384] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744985588344359|interv:1499975|
+[2025/04/18 22:13:08 346613] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_expire|event_type:expired|type:LOSS_DETECTION|expire_time:1744985588344359|
+[2025/04/18 22:13:08 346753] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744985589844359|interv:1497607|
+[2025/04/18 22:13:08 346849] [datagrams_sent] |scid:e593a5e5b72c8d5a|xqc_send|size:1216|path_id:0|
+[2025/04/18 22:13:08 346872] [packet_sent] |scid:e593a5e5b72c8d5a|xqc_send_packet_with_pn|<==|conn:000055E92D3CF91C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:3|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:1200|now:1744985588346799|stream_id:0|stream_offset:0|
+[2025/04/18 22:13:08 346894] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744985591346799|interv:2999906|
+[2025/04/18 22:13:08 346926] [datagrams_sent] |scid:e593a5e5b72c8d5a|xqc_send|size:1216|path_id:0|
+[2025/04/18 22:13:08 346938] [packet_sent] |scid:e593a5e5b72c8d5a|xqc_send_packet_with_pn|<==|conn:000055E92D3CF91C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:4|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:2400|now:1744985588346914|stream_id:0|stream_offset:0|
+[2025/04/18 22:13:08 346951] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744985591346914|interv:2999963|
+[2025/04/18 22:13:11 351131] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_expire|event_type:expired|type:LOSS_DETECTION|expire_time:1744985591346914|
+[2025/04/18 22:13:11 351287] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744985594346914|interv:2995628|
+[2025/04/18 22:13:11 351371] [datagrams_sent] |scid:e593a5e5b72c8d5a|xqc_send|size:1216|path_id:0|
+[2025/04/18 22:13:11 351385] [packet_sent] |scid:e593a5e5b72c8d5a|xqc_send_packet_with_pn|<==|conn:000055E92D3CF91C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:5|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:3600|now:1744985591351326|stream_id:0|stream_offset:0|
+[2025/04/18 22:13:11 351399] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744985597351326|interv:5999927|
+[2025/04/18 22:13:11 351420] [datagrams_sent] |scid:e593a5e5b72c8d5a|xqc_send|size:1216|path_id:0|
+[2025/04/18 22:13:11 351430] [packet_sent] |scid:e593a5e5b72c8d5a|xqc_send_packet_with_pn|<==|conn:000055E92D3CF91C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:6|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:4800|now:1744985591351414|stream_id:0|stream_offset:0|
+[2025/04/18 22:13:11 351440] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744985597351414|interv:5999974|
+[2025/04/18 22:13:15 084111] [loss_timer_updated] |scid:e593a5e5b72c8d5a|xqc_timer_unset|event_type:cancel|type:LOSS_DETECTION|
+[2025/04/18 22:13:15 084205] [connection_state_updated] |scid:e593a5e5b72c8d5a|xqc_conn_immediate_close|new:CLOSING|
+[2025/04/18 22:13:15 094121] [datagrams_sent] |scid:e593a5e5b72c8d5a|xqc_send|size:1216|path_id:0|
+[2025/04/18 22:13:15 094216] [packet_sent] |scid:e593a5e5b72c8d5a|xqc_send_packet_with_pn|<==|conn:000055E92D3CF91C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:7|size:1200|frame_flag:PADDING CONNECTION_CLOSE |sent:1216|inflight:0|now:1744985595094091|stream_id:0|stream_offset:0|
+[2025/04/18 22:13:17 417819] [connection_state_updated] |scid:e593a5e5b72c8d5a|xqc_engine_process_conn|new:CLOSED|
+[2025/04/18 22:13:17 417968] [report] |scid:e593a5e5b72c8d5a|xqc_conn_destroy|000055E92D3CF91C|has_0rtt:0|0rtt_accept:0|token_ok:-1|handshake_time:0|first_send_delay:3569|conn_persist:11337517|keyupdate_cnt:0|err:0x0|close_msg:local close|addr or cid not avail|hsk_recv:0|close_recv:0|close_send:9013640|last_recv:0|last_send:9013640|mp_enable:0|create:1|validated:1|active:1|path_info:0/0/0/a/0,1,1,1,0,0,0,0,0,0,0,8,0,0,0,0,0,i96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1200,21,6,5270,0,1200,40001,7,9013,0,1200,21,5,5270,0-2,0-2,0-0,0-0,0-0,0-250,0-9728,0-0,0-8,0-0,0-0,0-4,0-0,0-0,0-0,0-0,0-0,0-0|alpn:|rebind_count:0|rebind_valid:0|rtx_pkt:0|tlp_pkt:4|snd_pkt:8|spurious_loss:0|detected_loss:2|max_pto:3|finished_streams:0|cli_bidi_s:1|svr_bidi_s:0|fec_exist:0|fec_ensch:NO_FEC|fec_desch:NO_FEC|fec_neg_fail:0|fec_mp_mode:NO_FEC|send_fec_pkts:0|recovered_fec_num:0|max_po_size:1200|max_probing_size:1420|ppo_size:1420|
+[2025/04/18 22:13:17 417993] [connection_closed] |scid:e593a5e5b72c8d5a|xqc_conn_destroy|err_code:0|mtu_updatad_count:0|pkt_dropped:0|
+[2025/04/18 22:13:17 418035] [report] |scid:e593a5e5b72c8d5a|xqc_h3_request_destroy|stream_id:0|close_msg:conn closed|err:0|rcvd_bdy_sz:0|snd_bdy_sz:0|rcvd_hdr_sz:0|snd_hdr_sz:81|create:1744985586083964|blkd:0|nblkd:0|hdr_b:0|hdr_e:0|bdy_b:0|fin:0|recv_end:0|hrd_send:72|bdy_send:0|fin_send:0|fin_ack:0|last_send:9010127|last_recv:0|mp_state:0|path_info:(0,0,0/0/0/a/0,0,0,0,0,0)|comp_hdr_s:24|comp_hdr_r:0|fst_fin_snd:0|sched_blk:0|sched_blk_time:0|cwnd_blk:0|cwnd_blk_time:0|pacing_blk:0|pacing_blk_time:0|begin_state:(0,134,1,0,0,388393,250)|end_state:(0,134,0,0,0,388393,250)|is_fec_protected:0|fec_reco_pkt_cnt:0|fec_block_size_mode:0|fst_rpr_ts:0|last_rpr_ts:0|
+[2025/04/19 02:03:20 010535] [connection_state_updated] |scid:a9e86bc5acd61029|xqc_conn_create|new:C_INIT|
+[2025/04/19 02:03:20 010697] [rec_parameters_set] |scid:a9e86bc5acd61029|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 02:03:20 010728] [path_assigned] |scid:a9e86bc5acd61029|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:bd3d2e3713a0a741|scid:a9e86bc5acd61029|
+[2025/04/19 02:03:20 010740] [tra_parameters_set] |scid:a9e86bc5acd61029|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/19 02:03:20 010993] [connection_started] |scid:a9e86bc5acd61029|xqc_client_connect|remote|dst_ip:192.168.31.1|dst_port:8443|scid:a9e86bc5acd61029|dcid:bd3d2e3713a0a741|
+[2025/04/19 02:03:20 011032] [http_parameters_set] |scid:a9e86bc5acd61029|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:03:20 011056] [http_stream_type_set] |scid:a9e86bc5acd61029|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/19 02:03:20 011121] [stream_data_moved] |scid:a9e86bc5acd61029|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562C3B5A793C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:03:20 011155] [http_stream_type_set] |scid:a9e86bc5acd61029|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/19 02:03:20 011167] [stream_data_moved] |scid:a9e86bc5acd61029|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562C3B5A793C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:03:20 011182] [http_stream_type_set] |scid:a9e86bc5acd61029|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/19 02:03:20 011204] [stream_data_moved] |scid:a9e86bc5acd61029|xqc_stream_send|ret:-610|stream_id:10|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562C3B5A793C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:03:20 011222] [http_frame_created] |scid:a9e86bc5acd61029|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:03:20 011232] [stream_data_moved] |scid:a9e86bc5acd61029|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562C3B5A793C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:03:20 011255] [connection_state_updated] |scid:a9e86bc5acd61029|xqc_crypto_stream_on_write|new:C_INITIAL_SENT|
+[2025/04/19 02:03:20 011342] [datagrams_sent] |scid:a9e86bc5acd61029|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:03:20 011354] [packet_sent] |scid:a9e86bc5acd61029|xqc_send_packet_with_pn|<==|conn:0000562C3B5A793C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:0|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1744999400011285|stream_id:0|stream_offset:0|
+[2025/04/19 02:03:20 011368] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744999400761285|interv:749918|
+[2025/04/19 02:03:20 011425] [http_stream_type_set] |scid:a9e86bc5acd61029|xqc_h3_stream_create|local|stream_id:0|stream_type:16|
+[2025/04/19 02:03:20 011466] [stream_data_moved] |scid:a9e86bc5acd61029|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562C3B5A793C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:03:20 011480] [http_frame_created] |scid:a9e86bc5acd61029|xqc_h3_stream_write_headers|stream_id:0|type:1|{name::method} {value:GET}|{name::scheme} {value:https}|{name::path}|{name:host} {value:test.xquic.com}|{name:content-type} {value:text/plain}|{name:content-length}|
+[2025/04/19 02:03:20 011491] [stream_data_moved] |scid:a9e86bc5acd61029|xqc_stream_send|ret:-610|stream_id:0|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:2|offset:0|fin:0|stream_flag:17|conn:0000562C3B5A793C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:03:20 762894] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_expire|event_type:expired|type:LOSS_DETECTION|expire_time:1744999400761285|
+[2025/04/19 02:03:20 763040] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744999402263038|interv:1500000|
+[2025/04/19 02:03:20 763126] [datagrams_sent] |scid:a9e86bc5acd61029|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:03:20 763139] [packet_sent] |scid:a9e86bc5acd61029|xqc_send_packet_with_pn|<==|conn:0000562C3B5A793C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:1|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1744999400763080|stream_id:0|stream_offset:0|
+[2025/04/19 02:03:20 763154] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744999402263080|interv:1499926|
+[2025/04/19 02:03:20 763174] [datagrams_sent] |scid:a9e86bc5acd61029|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:03:20 763184] [packet_sent] |scid:a9e86bc5acd61029|xqc_send_packet_with_pn|<==|conn:0000562C3B5A793C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:2|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:1200|now:1744999400763168|stream_id:0|stream_offset:0|
+[2025/04/19 02:03:20 763194] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744999402263168|interv:1499974|
+[2025/04/19 02:03:22 264854] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_expire|event_type:expired|type:LOSS_DETECTION|expire_time:1744999402263168|
+[2025/04/19 02:03:22 264995] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744999403763168|interv:1498174|
+[2025/04/19 02:03:22 265116] [datagrams_sent] |scid:a9e86bc5acd61029|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:03:22 265137] [packet_sent] |scid:a9e86bc5acd61029|xqc_send_packet_with_pn|<==|conn:0000562C3B5A793C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:3|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:1200|now:1744999402265064|stream_id:0|stream_offset:0|
+[2025/04/19 02:03:22 265154] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744999405265064|interv:2999911|
+[2025/04/19 02:03:22 265180] [datagrams_sent] |scid:a9e86bc5acd61029|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:03:22 265189] [packet_sent] |scid:a9e86bc5acd61029|xqc_send_packet_with_pn|<==|conn:0000562C3B5A793C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:4|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:2400|now:1744999402265170|stream_id:0|stream_offset:0|
+[2025/04/19 02:03:22 265200] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744999405265170|interv:2999970|
+[2025/04/19 02:03:25 268286] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_expire|event_type:expired|type:LOSS_DETECTION|expire_time:1744999405265170|
+[2025/04/19 02:03:25 268412] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744999408265170|interv:2996759|
+[2025/04/19 02:03:25 268509] [datagrams_sent] |scid:a9e86bc5acd61029|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:03:25 268529] [packet_sent] |scid:a9e86bc5acd61029|xqc_send_packet_with_pn|<==|conn:0000562C3B5A793C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:5|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:3600|now:1744999405268466|stream_id:0|stream_offset:0|
+[2025/04/19 02:03:25 268546] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744999411268466|interv:5999921|
+[2025/04/19 02:03:25 268577] [datagrams_sent] |scid:a9e86bc5acd61029|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:03:25 268597] [packet_sent] |scid:a9e86bc5acd61029|xqc_send_packet_with_pn|<==|conn:0000562C3B5A793C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:6|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:4800|now:1744999405268565|stream_id:0|stream_offset:0|
+[2025/04/19 02:03:25 268616] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744999411268565|interv:5999950|
+[2025/04/19 02:03:29 012618] [loss_timer_updated] |scid:a9e86bc5acd61029|xqc_timer_unset|event_type:cancel|type:LOSS_DETECTION|
+[2025/04/19 02:03:29 012709] [connection_state_updated] |scid:a9e86bc5acd61029|xqc_conn_immediate_close|new:CLOSING|
+[2025/04/19 02:03:29 023062] [datagrams_sent] |scid:a9e86bc5acd61029|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:03:29 023151] [packet_sent] |scid:a9e86bc5acd61029|xqc_send_packet_with_pn|<==|conn:0000562C3B5A793C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:7|size:1200|frame_flag:PADDING CONNECTION_CLOSE |sent:1216|inflight:0|now:1744999409023024|stream_id:0|stream_offset:0|
+[2025/04/19 02:03:31 346548] [connection_state_updated] |scid:a9e86bc5acd61029|xqc_engine_process_conn|new:CLOSED|
+[2025/04/19 02:03:31 346688] [report] |scid:a9e86bc5acd61029|xqc_conn_destroy|0000562C3B5A793C|has_0rtt:0|0rtt_accept:0|token_ok:-1|handshake_time:0|first_send_delay:835|conn_persist:11336033|keyupdate_cnt:0|err:0x0|close_msg:local close|addr or cid not avail|hsk_recv:0|close_recv:0|close_send:9012369|last_recv:0|last_send:9012369|mp_enable:0|create:1|validated:1|active:1|path_info:0/0/0/a/0,1,1,1,0,0,0,0,0,0,0,8,0,0,0,0,0,i96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1200,21,6,5257,0,1200,40001,7,9012,0,1200,21,5,5257,0-2,0-2,0-0,0-0,0-0,0-250,0-9728,0-0,0-8,0-0,0-0,0-4,0-0,0-0,0-0,0-0,0-0,0-0|alpn:|rebind_count:0|rebind_valid:0|rtx_pkt:0|tlp_pkt:4|snd_pkt:8|spurious_loss:0|detected_loss:2|max_pto:3|finished_streams:0|cli_bidi_s:1|svr_bidi_s:0|fec_exist:0|fec_ensch:NO_FEC|fec_desch:NO_FEC|fec_neg_fail:0|fec_mp_mode:NO_FEC|send_fec_pkts:0|recovered_fec_num:0|max_po_size:1200|max_probing_size:1420|ppo_size:1420|
+[2025/04/19 02:03:31 346726] [connection_closed] |scid:a9e86bc5acd61029|xqc_conn_destroy|err_code:0|mtu_updatad_count:0|pkt_dropped:0|
+[2025/04/19 02:03:31 346770] [report] |scid:a9e86bc5acd61029|xqc_h3_request_destroy|stream_id:0|close_msg:conn closed|err:0|rcvd_bdy_sz:0|snd_bdy_sz:0|rcvd_hdr_sz:0|snd_hdr_sz:81|create:1744999400011444|blkd:0|nblkd:0|hdr_b:0|hdr_e:0|bdy_b:0|fin:0|recv_end:0|hrd_send:62|bdy_send:0|fin_send:0|fin_ack:0|last_send:9011580|last_recv:0|mp_state:0|path_info:(0,0,0/0/0/a/0,0,0,0,0,0)|comp_hdr_s:24|comp_hdr_r:0|fst_fin_snd:0|sched_blk:0|sched_blk_time:0|cwnd_blk:0|cwnd_blk_time:0|pacing_blk:0|pacing_blk_time:0|begin_state:(0,134,1,0,0,388393,250)|end_state:(0,134,0,0,0,388393,250)|is_fec_protected:0|fec_reco_pkt_cnt:0|fec_block_size_mode:0|fst_rpr_ts:0|last_rpr_ts:0|
+[2025/04/19 02:10:23 981431] [connection_state_updated] |scid:f92933da218f2da0|xqc_conn_create|new:C_INIT|
+[2025/04/19 02:10:24 008989] [rec_parameters_set] |scid:f92933da218f2da0|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 02:10:24 009032] [path_assigned] |scid:f92933da218f2da0|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:b6a19417402c8faf|scid:f92933da218f2da0|
+[2025/04/19 02:10:24 009043] [tra_parameters_set] |scid:f92933da218f2da0|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/19 02:10:24 011593] [connection_started] |scid:f92933da218f2da0|xqc_client_connect|remote|dst_ip:192.168.31.1|dst_port:8443|scid:f92933da218f2da0|dcid:b6a19417402c8faf|
+[2025/04/19 02:10:24 011678] [http_parameters_set] |scid:f92933da218f2da0|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:10:24 011705] [http_stream_type_set] |scid:f92933da218f2da0|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/19 02:10:24 011732] [stream_data_moved] |scid:f92933da218f2da0|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:10:24 011769] [http_stream_type_set] |scid:f92933da218f2da0|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/19 02:10:24 011779] [stream_data_moved] |scid:f92933da218f2da0|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:10:24 011793] [http_stream_type_set] |scid:f92933da218f2da0|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/19 02:10:24 011802] [stream_data_moved] |scid:f92933da218f2da0|xqc_stream_send|ret:-610|stream_id:10|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:10:24 011817] [http_frame_created] |scid:f92933da218f2da0|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:10:24 011831] [stream_data_moved] |scid:f92933da218f2da0|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:10:24 011857] [connection_state_updated] |scid:f92933da218f2da0|xqc_crypto_stream_on_write|new:C_INITIAL_SENT|
+[2025/04/19 02:10:24 011987] [datagrams_sent] |scid:f92933da218f2da0|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:10:24 012045] [packet_sent] |scid:f92933da218f2da0|xqc_send_packet_with_pn|<==|conn:0000555555A4893C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:0|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1744999824011916|stream_id:0|stream_offset:0|
+[2025/04/19 02:10:24 012064] [loss_timer_updated] |scid:f92933da218f2da0|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1744999824761916|interv:749854|
+[2025/04/19 02:10:24 012152] [http_stream_type_set] |scid:f92933da218f2da0|xqc_h3_stream_create|local|stream_id:0|stream_type:16|
+[2025/04/19 02:10:24 012194] [stream_data_moved] |scid:f92933da218f2da0|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:10:24 012211] [http_frame_created] |scid:f92933da218f2da0|xqc_h3_stream_write_headers|stream_id:0|type:1|{name::method} {value:GET}|{name::scheme} {value:https}|{name::path}|{name:host} {value:test.xquic.com}|{name:content-type} {value:text/plain}|{name:content-length}|
+[2025/04/19 02:10:24 012224] [stream_data_moved] |scid:f92933da218f2da0|xqc_stream_send|ret:-610|stream_id:0|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:2|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:14:57 770679] [connection_state_updated] |scid:0e7a639ca05b2104|xqc_conn_create|new:C_INIT|
+[2025/04/19 02:14:57 770929] [rec_parameters_set] |scid:0e7a639ca05b2104|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 02:14:57 770962] [path_assigned] |scid:0e7a639ca05b2104|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:ab9ed0569e5c96ed|scid:0e7a639ca05b2104|
+[2025/04/19 02:14:57 770976] [tra_parameters_set] |scid:0e7a639ca05b2104|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/19 02:19:33 674005] [connection_state_updated] |scid:955bf511b8a28058|xqc_conn_create|new:C_INIT|
+[2025/04/19 02:20:51 462774] [rec_parameters_set] |scid:955bf511b8a28058|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 02:20:51 462893] [path_assigned] |scid:955bf511b8a28058|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:1e53f7eacdcdf554|scid:955bf511b8a28058|
+[2025/04/19 02:21:11 881602] [connection_state_updated] |scid:f3573d49f053fa4d|xqc_conn_create|new:C_INIT|
+[2025/04/19 02:22:01 370625] [rec_parameters_set] |scid:f3573d49f053fa4d|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 02:23:23 580173] [path_assigned] |scid:f3573d49f053fa4d|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:36c6fd0ec18ef9a8|scid:f3573d49f053fa4d|
+[2025/04/19 02:36:40 421294] [tra_parameters_set] |scid:f3573d49f053fa4d|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/19 02:36:40 449549] [connection_started] |scid:f3573d49f053fa4d|xqc_client_connect|remote|dst_ip:192.168.31.1|dst_port:8443|scid:f3573d49f053fa4d|dcid:36c6fd0ec18ef9a8|
+[2025/04/19 02:36:40 451197] [http_parameters_set] |scid:f3573d49f053fa4d|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:36:40 451581] [http_stream_type_set] |scid:f3573d49f053fa4d|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/19 02:36:40 452493] [stream_data_moved] |scid:f3573d49f053fa4d|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:36:40 452610] [http_stream_type_set] |scid:f3573d49f053fa4d|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/19 02:36:40 452630] [stream_data_moved] |scid:f3573d49f053fa4d|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:36:40 452648] [http_stream_type_set] |scid:f3573d49f053fa4d|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/19 02:36:40 452659] [stream_data_moved] |scid:f3573d49f053fa4d|xqc_stream_send|ret:-610|stream_id:10|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:36:40 452675] [http_frame_created] |scid:f3573d49f053fa4d|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:36:40 452690] [stream_data_moved] |scid:f3573d49f053fa4d|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:36:40 452768] [connection_state_updated] |scid:f3573d49f053fa4d|xqc_engine_process_conn|new:CLOSED|
+[2025/04/19 02:36:40 454177] [error] |scid:f3573d49f053fa4d|xqc_create_stream_with_conn|conn closing, cannot create stream|type:0|state:13|flag:WAIT_WAKEUP TIME_OUT UPPER_CONN_EXIST |
+[2025/04/19 02:36:40 454245] [error] |xqc_stream_create|xqc_create_stream_with_conn error|
+[2025/04/19 02:36:40 454267] [error] |xqc_h3_request_create|xqc_stream_create error|
+[2025/04/19 02:37:18 716615] [connection_state_updated] |scid:6e70831889ad4e12|xqc_conn_create|new:C_INIT|
+[2025/04/19 02:37:18 716788] [rec_parameters_set] |scid:6e70831889ad4e12|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 02:37:18 716813] [path_assigned] |scid:6e70831889ad4e12|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:ee682b169da4d72d|scid:6e70831889ad4e12|
+[2025/04/19 02:37:18 716824] [tra_parameters_set] |scid:6e70831889ad4e12|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/19 02:37:18 717158] [connection_started] |scid:6e70831889ad4e12|xqc_client_connect|remote|dst_ip:192.168.31.1|dst_port:8443|scid:6e70831889ad4e12|dcid:ee682b169da4d72d|
+[2025/04/19 02:37:18 717246] [http_parameters_set] |scid:6e70831889ad4e12|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:37:18 717272] [http_stream_type_set] |scid:6e70831889ad4e12|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/19 02:37:18 717290] [stream_data_moved] |scid:6e70831889ad4e12|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:37:18 717310] [http_stream_type_set] |scid:6e70831889ad4e12|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/19 02:37:18 717320] [stream_data_moved] |scid:6e70831889ad4e12|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:37:18 717333] [http_stream_type_set] |scid:6e70831889ad4e12|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/19 02:37:18 717355] [stream_data_moved] |scid:6e70831889ad4e12|xqc_stream_send|ret:-610|stream_id:10|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:37:18 717370] [http_frame_created] |scid:6e70831889ad4e12|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:37:18 717382] [stream_data_moved] |scid:6e70831889ad4e12|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:37:18 717414] [connection_state_updated] |scid:6e70831889ad4e12|xqc_crypto_stream_on_write|new:C_INITIAL_SENT|
+[2025/04/19 02:37:18 717567] [datagrams_sent] |scid:6e70831889ad4e12|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:37:18 717623] [packet_sent] |scid:6e70831889ad4e12|xqc_send_packet_with_pn|<==|conn:0000555555A4893C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:0|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1745001438717504|stream_id:0|stream_offset:0|
+[2025/04/19 02:37:18 717642] [loss_timer_updated] |scid:6e70831889ad4e12|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745001439467504|interv:749863|
+[2025/04/19 02:37:18 717710] [http_stream_type_set] |scid:6e70831889ad4e12|xqc_h3_stream_create|local|stream_id:0|stream_type:16|
+[2025/04/19 02:37:18 717767] [stream_data_moved] |scid:6e70831889ad4e12|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:37:18 717791] [http_frame_created] |scid:6e70831889ad4e12|xqc_h3_stream_write_headers|stream_id:0|type:1|{name::method} {value:GET}|{name::scheme} {value:https}|{name::path}|{name:host} {value:test.xquic.com}|{name:content-type} {value:text/plain}|{name:content-length}|
+[2025/04/19 02:37:18 717802] [stream_data_moved] |scid:6e70831889ad4e12|xqc_stream_send|ret:-610|stream_id:0|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:2|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:40:03 605327] [loss_timer_updated] |scid:6e70831889ad4e12|xqc_timer_expire|event_type:expired|type:LOSS_DETECTION|expire_time:1745001439467504|
+[2025/04/19 02:40:03 606827] [loss_timer_updated] |scid:6e70831889ad4e12|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745001605106825|interv:1500001|
+[2025/04/19 02:40:03 606849] [connection_state_updated] |scid:6e70831889ad4e12|xqc_engine_process_conn|new:CLOSED|
+[2025/04/19 02:40:03 607132] [report] |scid:6e70831889ad4e12|xqc_conn_destroy|0000555555A4893C|has_0rtt:0|0rtt_accept:0|token_ok:-1|handshake_time:0|first_send_delay:1066|conn_persist:164890397|keyupdate_cnt:0|err:0x0|close_msg:idle timeout|addr or cid not avail|hsk_recv:0|close_recv:0|close_send:0|last_recv:0|last_send:769|mp_enable:0|create:1|validated:1|active:1|path_info:0/0/0/a/0,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,i96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1200,21,0,0,0,0,0,0,0,0,0,0,0,0,0-2,0-2,0-0,0-0,0-0,0-250,0-1216,0-0,0-1,0-0,0-0,0-0,0-0,0-0,0-0,0-0,0-0,0-0|alpn:|rebind_count:0|rebind_valid:0|rtx_pkt:0|tlp_pkt:0|snd_pkt:1|spurious_loss:0|detected_loss:1|max_pto:1|finished_streams:0|cli_bidi_s:1|svr_bidi_s:0|fec_exist:0|fec_ensch:NO_FEC|fec_desch:NO_FEC|fec_neg_fail:0|fec_mp_mode:NO_FEC|send_fec_pkts:0|recovered_fec_num:0|max_po_size:1200|max_probing_size:1420|ppo_size:1420|
+[2025/04/19 02:40:03 607191] [connection_closed] |scid:6e70831889ad4e12|xqc_conn_destroy|err_code:0|mtu_updatad_count:0|pkt_dropped:0|
+[2025/04/19 02:40:03 607252] [report] |scid:6e70831889ad4e12|xqc_h3_request_destroy|stream_id:0|close_msg:conn closed|err:0|rcvd_bdy_sz:0|snd_bdy_sz:0|rcvd_hdr_sz:0|snd_hdr_sz:81|create:1745001438717736|blkd:0|nblkd:0|hdr_b:0|hdr_e:0|bdy_b:0|fin:0|recv_end:0|hrd_send:86|bdy_send:0|fin_send:0|fin_ack:0|last_send:18446744073709551384|last_recv:0|mp_state:0|path_info:(0,0,0/0/0/a/0,0,0,0,0,0)|comp_hdr_s:24|comp_hdr_r:0|fst_fin_snd:0|sched_blk:0|sched_blk_time:0|cwnd_blk:0|cwnd_blk_time:0|pacing_blk:0|pacing_blk_time:0|begin_state:(0,134,1,0,0,388393,250)|end_state:(0,134,0,0,0,388393,250)|is_fec_protected:0|fec_reco_pkt_cnt:0|fec_block_size_mode:0|fst_rpr_ts:0|last_rpr_ts:0|
+[2025/04/19 02:42:58 495490] [connection_state_updated] |scid:01ab300ee22acfab|xqc_conn_create|new:C_INIT|
+[2025/04/19 02:42:58 495659] [rec_parameters_set] |scid:01ab300ee22acfab|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 02:42:58 495682] [path_assigned] |scid:01ab300ee22acfab|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:251fb5552ab4031d|scid:01ab300ee22acfab|
+[2025/04/19 02:42:58 495693] [tra_parameters_set] |scid:01ab300ee22acfab|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/19 02:42:58 496036] [connection_started] |scid:01ab300ee22acfab|xqc_client_connect|remote|dst_ip:192.168.31.1|dst_port:8443|scid:01ab300ee22acfab|dcid:251fb5552ab4031d|
+[2025/04/19 02:42:58 496119] [http_parameters_set] |scid:01ab300ee22acfab|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:42:58 496149] [http_stream_type_set] |scid:01ab300ee22acfab|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/19 02:42:58 496168] [stream_data_moved] |scid:01ab300ee22acfab|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:42:58 496192] [http_stream_type_set] |scid:01ab300ee22acfab|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/19 02:42:58 496202] [stream_data_moved] |scid:01ab300ee22acfab|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:42:58 496216] [http_stream_type_set] |scid:01ab300ee22acfab|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/19 02:42:58 496225] [stream_data_moved] |scid:01ab300ee22acfab|xqc_stream_send|ret:-610|stream_id:10|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:42:58 496239] [http_frame_created] |scid:01ab300ee22acfab|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:42:58 496252] [stream_data_moved] |scid:01ab300ee22acfab|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:42:58 496275] [connection_state_updated] |scid:01ab300ee22acfab|xqc_crypto_stream_on_write|new:C_INITIAL_SENT|
+[2025/04/19 02:42:58 496363] [datagrams_sent] |scid:01ab300ee22acfab|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:42:58 496405] [packet_sent] |scid:01ab300ee22acfab|xqc_send_packet_with_pn|<==|conn:0000555555A4893C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:0|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1745001778496305|stream_id:0|stream_offset:0|
+[2025/04/19 02:42:58 496438] [loss_timer_updated] |scid:01ab300ee22acfab|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745001779246305|interv:749869|
+[2025/04/19 02:42:58 496500] [http_stream_type_set] |scid:01ab300ee22acfab|xqc_h3_stream_create|local|stream_id:0|stream_type:16|
+[2025/04/19 02:42:58 496542] [stream_data_moved] |scid:01ab300ee22acfab|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:42:58 496556] [http_frame_created] |scid:01ab300ee22acfab|xqc_h3_stream_write_headers|stream_id:0|type:1|{name::method} {value:GET}|{name::scheme} {value:https}|{name::path}|{name:host} {value:test.xquic.com}|{name:content-type} {value:text/plain}|{name:content-length}|
+[2025/04/19 02:42:58 496566] [stream_data_moved] |scid:01ab300ee22acfab|xqc_stream_send|ret:-610|stream_id:0|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:2|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:43:07 661806] [connection_state_updated] |scid:afee8452321cb46a|xqc_conn_create|new:C_INIT|
+[2025/04/19 02:43:07 661986] [rec_parameters_set] |scid:afee8452321cb46a|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 02:43:07 662014] [path_assigned] |scid:afee8452321cb46a|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:89fc34849618dcaa|scid:afee8452321cb46a|
+[2025/04/19 02:43:07 662027] [tra_parameters_set] |scid:afee8452321cb46a|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/19 02:43:07 662352] [connection_started] |scid:afee8452321cb46a|xqc_client_connect|remote|dst_ip:192.168.31.1|dst_port:8443|scid:afee8452321cb46a|dcid:89fc34849618dcaa|
+[2025/04/19 02:43:07 662463] [http_parameters_set] |scid:afee8452321cb46a|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:43:07 662497] [http_stream_type_set] |scid:afee8452321cb46a|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/19 02:43:07 662518] [stream_data_moved] |scid:afee8452321cb46a|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:43:07 662543] [http_stream_type_set] |scid:afee8452321cb46a|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/19 02:43:07 662555] [stream_data_moved] |scid:afee8452321cb46a|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:43:07 662572] [http_stream_type_set] |scid:afee8452321cb46a|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/19 02:43:07 662584] [stream_data_moved] |scid:afee8452321cb46a|xqc_stream_send|ret:-610|stream_id:10|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:43:07 662602] [http_frame_created] |scid:afee8452321cb46a|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:43:07 662618] [stream_data_moved] |scid:afee8452321cb46a|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:43:07 662676] [connection_state_updated] |scid:afee8452321cb46a|xqc_crypto_stream_on_write|new:C_INITIAL_SENT|
+[2025/04/19 02:43:07 662784] [datagrams_sent] |scid:afee8452321cb46a|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:43:07 662848] [packet_sent] |scid:afee8452321cb46a|xqc_send_packet_with_pn|<==|conn:0000555555A4893C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:0|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1745001787662716|stream_id:0|stream_offset:0|
+[2025/04/19 02:43:07 662870] [loss_timer_updated] |scid:afee8452321cb46a|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745001788412716|interv:749848|
+[2025/04/19 02:43:07 662947] [http_stream_type_set] |scid:afee8452321cb46a|xqc_h3_stream_create|local|stream_id:0|stream_type:16|
+[2025/04/19 02:43:07 663005] [stream_data_moved] |scid:afee8452321cb46a|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:43:07 663022] [http_frame_created] |scid:afee8452321cb46a|xqc_h3_stream_write_headers|stream_id:0|type:1|{name::method} {value:GET}|{name::scheme} {value:https}|{name::path}|{name:host} {value:test.xquic.com}|{name:content-type} {value:text/plain}|{name:content-length}|
+[2025/04/19 02:43:07 663035] [stream_data_moved] |scid:afee8452321cb46a|xqc_stream_send|ret:-610|stream_id:0|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:2|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:44:22 846973] [connection_state_updated] |scid:a50291277e84712f|xqc_conn_create|new:C_INIT|
+[2025/04/19 02:44:22 847171] [rec_parameters_set] |scid:a50291277e84712f|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 02:44:22 847199] [path_assigned] |scid:a50291277e84712f|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:bc484bd551a9fb33|scid:a50291277e84712f|
+[2025/04/19 02:44:22 847212] [tra_parameters_set] |scid:a50291277e84712f|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/19 02:44:22 847539] [connection_started] |scid:a50291277e84712f|xqc_client_connect|remote|dst_ip:192.168.31.1|dst_port:8443|scid:a50291277e84712f|dcid:bc484bd551a9fb33|
+[2025/04/19 02:44:22 847626] [http_parameters_set] |scid:a50291277e84712f|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:44:22 847656] [http_stream_type_set] |scid:a50291277e84712f|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/19 02:44:22 847676] [stream_data_moved] |scid:a50291277e84712f|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:44:22 847699] [http_stream_type_set] |scid:a50291277e84712f|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/19 02:44:22 847708] [stream_data_moved] |scid:a50291277e84712f|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:44:22 847722] [http_stream_type_set] |scid:a50291277e84712f|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/19 02:44:22 847731] [stream_data_moved] |scid:a50291277e84712f|xqc_stream_send|ret:-610|stream_id:10|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:44:22 847758] [http_frame_created] |scid:a50291277e84712f|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:44:22 847771] [stream_data_moved] |scid:a50291277e84712f|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:44:22 847793] [connection_state_updated] |scid:a50291277e84712f|xqc_crypto_stream_on_write|new:C_INITIAL_SENT|
+[2025/04/19 02:44:22 847878] [datagrams_sent] |scid:a50291277e84712f|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:44:22 847929] [packet_sent] |scid:a50291277e84712f|xqc_send_packet_with_pn|<==|conn:0000555555A4893C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:0|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1745001862847823|stream_id:0|stream_offset:0|
+[2025/04/19 02:44:22 847947] [loss_timer_updated] |scid:a50291277e84712f|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745001863597823|interv:749878|
+[2025/04/19 02:44:22 848006] [http_stream_type_set] |scid:a50291277e84712f|xqc_h3_stream_create|local|stream_id:0|stream_type:16|
+[2025/04/19 02:44:22 848086] [stream_data_moved] |scid:a50291277e84712f|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:44:22 848108] [http_frame_created] |scid:a50291277e84712f|xqc_h3_stream_write_headers|stream_id:0|type:1|{name::method} {value:GET}|{name::scheme} {value:https}|{name::path}|{name:host} {value:test.xquic.com}|{name:content-type} {value:text/plain}|{name:content-length}|
+[2025/04/19 02:44:22 848122] [stream_data_moved] |scid:a50291277e84712f|xqc_stream_send|ret:-610|stream_id:0|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:2|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:45:57 059975] [connection_state_updated] |scid:d252a8971bbb3aa5|xqc_conn_create|new:C_INIT|
+[2025/04/19 02:45:57 060113] [rec_parameters_set] |scid:d252a8971bbb3aa5|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 02:45:57 060135] [path_assigned] |scid:d252a8971bbb3aa5|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:916fd777daff94c9|scid:d252a8971bbb3aa5|
+[2025/04/19 02:45:57 060145] [tra_parameters_set] |scid:d252a8971bbb3aa5|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/19 02:45:57 060398] [connection_started] |scid:d252a8971bbb3aa5|xqc_client_connect|remote|dst_ip:192.168.31.1|dst_port:8443|scid:d252a8971bbb3aa5|dcid:916fd777daff94c9|
+[2025/04/19 02:45:57 060473] [http_parameters_set] |scid:d252a8971bbb3aa5|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:45:57 060497] [http_stream_type_set] |scid:d252a8971bbb3aa5|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/19 02:45:57 060513] [stream_data_moved] |scid:d252a8971bbb3aa5|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:45:57 060534] [http_stream_type_set] |scid:d252a8971bbb3aa5|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/19 02:45:57 060543] [stream_data_moved] |scid:d252a8971bbb3aa5|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:45:57 060571] [http_stream_type_set] |scid:d252a8971bbb3aa5|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/19 02:45:57 060582] [stream_data_moved] |scid:d252a8971bbb3aa5|xqc_stream_send|ret:-610|stream_id:10|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:45:57 060600] [http_frame_created] |scid:d252a8971bbb3aa5|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:45:57 060612] [stream_data_moved] |scid:d252a8971bbb3aa5|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:45:57 060632] [connection_state_updated] |scid:d252a8971bbb3aa5|xqc_crypto_stream_on_write|new:C_INITIAL_SENT|
+[2025/04/19 02:45:57 060691] [datagrams_sent] |scid:d252a8971bbb3aa5|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:45:57 060701] [packet_sent] |scid:d252a8971bbb3aa5|xqc_send_packet_with_pn|<==|conn:0000555555A4893C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:0|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1745001957060656|stream_id:0|stream_offset:0|
+[2025/04/19 02:45:57 060714] [loss_timer_updated] |scid:d252a8971bbb3aa5|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745001957810656|interv:749943|
+[2025/04/19 02:45:57 060767] [http_stream_type_set] |scid:d252a8971bbb3aa5|xqc_h3_stream_create|local|stream_id:0|stream_type:16|
+[2025/04/19 02:45:57 060802] [stream_data_moved] |scid:d252a8971bbb3aa5|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:45:57 060816] [http_frame_created] |scid:d252a8971bbb3aa5|xqc_h3_stream_write_headers|stream_id:0|type:1|{name::method} {value:GET}|{name::scheme} {value:https}|{name::path}|{name:host} {value:test.xquic.com}|{name:content-type} {value:text/plain}|{name:content-length}|
+[2025/04/19 02:45:57 060826] [stream_data_moved] |scid:d252a8971bbb3aa5|xqc_stream_send|ret:-610|stream_id:0|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:2|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:48:15 273513] [connection_state_updated] |scid:8d4bbe0ce353031b|xqc_conn_create|new:C_INIT|
+[2025/04/19 02:48:15 273651] [rec_parameters_set] |scid:8d4bbe0ce353031b|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 02:48:15 273672] [path_assigned] |scid:8d4bbe0ce353031b|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:85a0e8f106d8f0b9|scid:8d4bbe0ce353031b|
+[2025/04/19 02:48:15 273683] [tra_parameters_set] |scid:8d4bbe0ce353031b|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/19 02:48:15 273923] [connection_started] |scid:8d4bbe0ce353031b|xqc_client_connect|remote|dst_ip:192.168.31.1|dst_port:8443|scid:8d4bbe0ce353031b|dcid:85a0e8f106d8f0b9|
+[2025/04/19 02:48:15 274019] [http_parameters_set] |scid:8d4bbe0ce353031b|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:48:15 274043] [http_stream_type_set] |scid:8d4bbe0ce353031b|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/19 02:48:15 274059] [stream_data_moved] |scid:8d4bbe0ce353031b|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:48:15 274087] [http_stream_type_set] |scid:8d4bbe0ce353031b|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/19 02:48:15 274097] [stream_data_moved] |scid:8d4bbe0ce353031b|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:48:15 274114] [http_stream_type_set] |scid:8d4bbe0ce353031b|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/19 02:48:15 274122] [stream_data_moved] |scid:8d4bbe0ce353031b|xqc_stream_send|ret:-610|stream_id:10|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:48:15 274137] [http_frame_created] |scid:8d4bbe0ce353031b|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:48:15 274149] [stream_data_moved] |scid:8d4bbe0ce353031b|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:48:15 274168] [connection_state_updated] |scid:8d4bbe0ce353031b|xqc_crypto_stream_on_write|new:C_INITIAL_SENT|
+[2025/04/19 02:48:15 274262] [datagrams_sent] |scid:8d4bbe0ce353031b|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:48:15 274272] [packet_sent] |scid:8d4bbe0ce353031b|xqc_send_packet_with_pn|<==|conn:0000555555A4893C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:0|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1745002095274195|stream_id:0|stream_offset:0|
+[2025/04/19 02:48:15 274284] [loss_timer_updated] |scid:8d4bbe0ce353031b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002096024195|interv:749912|
+[2025/04/19 02:48:15 274339] [http_stream_type_set] |scid:8d4bbe0ce353031b|xqc_h3_stream_create|local|stream_id:0|stream_type:16|
+[2025/04/19 02:48:15 274374] [stream_data_moved] |scid:8d4bbe0ce353031b|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:48:15 274387] [http_frame_created] |scid:8d4bbe0ce353031b|xqc_h3_stream_write_headers|stream_id:0|type:1|{name::method} {value:GET}|{name::scheme} {value:https}|{name::path}|{name:host} {value:test.xquic.com}|{name:content-type} {value:text/plain}|{name:content-length}|
+[2025/04/19 02:48:15 274398] [stream_data_moved] |scid:8d4bbe0ce353031b|xqc_stream_send|ret:-610|stream_id:0|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:2|offset:0|fin:0|stream_flag:17|conn:0000555555A4893C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:49:43 156352] [connection_state_updated] |scid:8ee685468af2f175|xqc_conn_create|new:C_INIT|
+[2025/04/19 02:49:43 156516] [rec_parameters_set] |scid:8ee685468af2f175|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 02:49:43 156538] [path_assigned] |scid:8ee685468af2f175|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:f66220fce0f3e32b|scid:8ee685468af2f175|
+[2025/04/19 02:49:43 156550] [tra_parameters_set] |scid:8ee685468af2f175|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/19 02:49:43 156805] [connection_started] |scid:8ee685468af2f175|xqc_client_connect|remote|dst_ip:127.0.0.1|dst_port:8443|scid:8ee685468af2f175|dcid:f66220fce0f3e32b|
+[2025/04/19 02:49:43 156884] [http_parameters_set] |scid:8ee685468af2f175|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:49:43 156912] [http_stream_type_set] |scid:8ee685468af2f175|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/19 02:49:43 156933] [stream_data_moved] |scid:8ee685468af2f175|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562E8D84593C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:49:43 156964] [http_stream_type_set] |scid:8ee685468af2f175|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/19 02:49:43 156985] [stream_data_moved] |scid:8ee685468af2f175|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562E8D84593C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:49:43 157004] [http_stream_type_set] |scid:8ee685468af2f175|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/19 02:49:43 157015] [stream_data_moved] |scid:8ee685468af2f175|xqc_stream_send|ret:-610|stream_id:10|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562E8D84593C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:49:43 157032] [http_frame_created] |scid:8ee685468af2f175|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:49:43 157042] [stream_data_moved] |scid:8ee685468af2f175|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562E8D84593C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:49:43 157065] [connection_state_updated] |scid:8ee685468af2f175|xqc_crypto_stream_on_write|new:C_INITIAL_SENT|
+[2025/04/19 02:49:43 157140] [datagrams_sent] |scid:8ee685468af2f175|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:49:43 157184] [packet_sent] |scid:8ee685468af2f175|xqc_send_packet_with_pn|<==|conn:0000562E8D84593C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:0|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1745002183157096|stream_id:0|stream_offset:0|
+[2025/04/19 02:49:43 157203] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002183907096|interv:749895|
+[2025/04/19 02:49:43 157266] [http_stream_type_set] |scid:8ee685468af2f175|xqc_h3_stream_create|local|stream_id:0|stream_type:16|
+[2025/04/19 02:49:43 157304] [stream_data_moved] |scid:8ee685468af2f175|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562E8D84593C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:49:43 157318] [http_frame_created] |scid:8ee685468af2f175|xqc_h3_stream_write_headers|stream_id:0|type:1|{name::method} {value:GET}|{name::scheme} {value:https}|{name::path}|{name:host} {value:test.xquic.com}|{name:content-type} {value:text/plain}|{name:content-length}|
+[2025/04/19 02:49:43 157329] [stream_data_moved] |scid:8ee685468af2f175|xqc_stream_send|ret:-610|stream_id:0|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:2|offset:0|fin:0|stream_flag:17|conn:0000562E8D84593C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:49:43 908976] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_expire|event_type:expired|type:LOSS_DETECTION|expire_time:1745002183907096|
+[2025/04/19 02:49:43 909114] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002185409113|interv:1500001|
+[2025/04/19 02:49:43 909214] [datagrams_sent] |scid:8ee685468af2f175|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:49:43 909227] [packet_sent] |scid:8ee685468af2f175|xqc_send_packet_with_pn|<==|conn:0000562E8D84593C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:1|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1745002183909170|stream_id:0|stream_offset:0|
+[2025/04/19 02:49:43 909242] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002185409170|interv:1499929|
+[2025/04/19 02:49:43 909260] [datagrams_sent] |scid:8ee685468af2f175|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:49:43 909269] [packet_sent] |scid:8ee685468af2f175|xqc_send_packet_with_pn|<==|conn:0000562E8D84593C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:2|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:1200|now:1745002183909255|stream_id:0|stream_offset:0|
+[2025/04/19 02:49:43 909279] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002185409255|interv:1499976|
+[2025/04/19 02:49:45 411777] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_expire|event_type:expired|type:LOSS_DETECTION|expire_time:1745002185409255|
+[2025/04/19 02:49:45 411934] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002186909255|interv:1497323|
+[2025/04/19 02:49:45 412035] [datagrams_sent] |scid:8ee685468af2f175|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:49:45 412058] [packet_sent] |scid:8ee685468af2f175|xqc_send_packet_with_pn|<==|conn:0000562E8D84593C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:3|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:1200|now:1745002185411986|stream_id:0|stream_offset:0|
+[2025/04/19 02:49:45 412081] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002188411986|interv:2999908|
+[2025/04/19 02:49:45 412107] [datagrams_sent] |scid:8ee685468af2f175|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:49:45 412119] [packet_sent] |scid:8ee685468af2f175|xqc_send_packet_with_pn|<==|conn:0000562E8D84593C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:4|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:2400|now:1745002185412099|stream_id:0|stream_offset:0|
+[2025/04/19 02:49:45 412132] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002188412099|interv:2999968|
+[2025/04/19 02:49:48 416498] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_expire|event_type:expired|type:LOSS_DETECTION|expire_time:1745002188412099|
+[2025/04/19 02:49:48 416660] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002191412099|interv:2995440|
+[2025/04/19 02:49:48 416754] [datagrams_sent] |scid:8ee685468af2f175|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:49:48 416771] [packet_sent] |scid:8ee685468af2f175|xqc_send_packet_with_pn|<==|conn:0000562E8D84593C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:5|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:3600|now:1745002188416705|stream_id:0|stream_offset:0|
+[2025/04/19 02:49:48 416796] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002194416705|interv:5999909|
+[2025/04/19 02:49:48 416831] [datagrams_sent] |scid:8ee685468af2f175|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:49:48 416843] [packet_sent] |scid:8ee685468af2f175|xqc_send_packet_with_pn|<==|conn:0000562E8D84593C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:6|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:4800|now:1745002188416819|stream_id:0|stream_offset:0|
+[2025/04/19 02:49:48 416857] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002194416819|interv:5999962|
+[2025/04/19 02:49:52 161960] [loss_timer_updated] |scid:8ee685468af2f175|xqc_timer_unset|event_type:cancel|type:LOSS_DETECTION|
+[2025/04/19 02:49:52 162108] [connection_state_updated] |scid:8ee685468af2f175|xqc_conn_immediate_close|new:CLOSING|
+[2025/04/19 02:49:52 164188] [datagrams_sent] |scid:8ee685468af2f175|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:49:52 164254] [packet_sent] |scid:8ee685468af2f175|xqc_send_packet_with_pn|<==|conn:0000562E8D84593C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:7|size:1200|frame_flag:PADDING CONNECTION_CLOSE |sent:1216|inflight:0|now:1745002192164133|stream_id:0|stream_offset:0|
+[2025/04/19 02:49:54 494418] [connection_state_updated] |scid:8ee685468af2f175|xqc_engine_process_conn|new:CLOSED|
+[2025/04/19 02:49:54 494560] [report] |scid:8ee685468af2f175|xqc_conn_destroy|0000562E8D84593C|has_0rtt:0|0rtt_accept:0|token_ok:-1|handshake_time:0|first_send_delay:855|conn_persist:11338087|keyupdate_cnt:0|err:0x0|close_msg:local close|addr or cid not avail|hsk_recv:0|close_recv:0|close_send:9007660|last_recv:0|last_send:9007660|mp_enable:0|create:1|validated:1|active:1|path_info:0/0/0/a/0,1,1,1,0,0,0,0,0,0,0,8,0,0,0,0,0,i96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1200,21,6,5260,0,1200,40001,7,9007,0,1200,21,5,5260,0-2,0-2,0-0,0-0,0-0,0-250,0-9728,0-0,0-8,0-0,0-0,0-4,0-0,0-0,0-0,0-0,0-0,0-0|alpn:|rebind_count:0|rebind_valid:0|rtx_pkt:0|tlp_pkt:4|snd_pkt:8|spurious_loss:0|detected_loss:2|max_pto:3|finished_streams:0|cli_bidi_s:1|svr_bidi_s:0|fec_exist:0|fec_ensch:NO_FEC|fec_desch:NO_FEC|fec_neg_fail:0|fec_mp_mode:NO_FEC|send_fec_pkts:0|recovered_fec_num:0|max_po_size:1200|max_probing_size:1420|ppo_size:1420|
+[2025/04/19 02:49:54 494586] [connection_closed] |scid:8ee685468af2f175|xqc_conn_destroy|err_code:0|mtu_updatad_count:0|pkt_dropped:0|
+[2025/04/19 02:49:54 494629] [report] |scid:8ee685468af2f175|xqc_h3_request_destroy|stream_id:0|close_msg:conn closed|err:0|rcvd_bdy_sz:0|snd_bdy_sz:0|rcvd_hdr_sz:0|snd_hdr_sz:81|create:1745002183157284|blkd:0|nblkd:0|hdr_b:0|hdr_e:0|bdy_b:0|fin:0|recv_end:0|hrd_send:60|bdy_send:0|fin_send:0|fin_ack:0|last_send:9006849|last_recv:0|mp_state:0|path_info:(0,0,0/0/0/a/0,0,0,0,0,0)|comp_hdr_s:24|comp_hdr_r:0|fst_fin_snd:0|sched_blk:0|sched_blk_time:0|cwnd_blk:0|cwnd_blk_time:0|pacing_blk:0|pacing_blk_time:0|begin_state:(0,134,1,0,0,388393,250)|end_state:(0,134,0,0,0,388393,250)|is_fec_protected:0|fec_reco_pkt_cnt:0|fec_block_size_mode:0|fst_rpr_ts:0|last_rpr_ts:0|
+[2025/04/19 02:57:49 246149] [connection_state_updated] |scid:51818ecfce0478de|xqc_conn_create|new:C_INIT|
+[2025/04/19 02:57:49 272264] [rec_parameters_set] |scid:51818ecfce0478de|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 02:57:49 272317] [path_assigned] |scid:51818ecfce0478de|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:ad7a09eb8a1559e0|scid:51818ecfce0478de|
+[2025/04/19 02:57:49 272329] [tra_parameters_set] |scid:51818ecfce0478de|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/19 02:57:49 272720] [connection_started] |scid:51818ecfce0478de|xqc_client_connect|remote|dst_ip:127.0.0.1|dst_port:8443|scid:51818ecfce0478de|dcid:ad7a09eb8a1559e0|
+[2025/04/19 02:57:49 272811] [http_parameters_set] |scid:51818ecfce0478de|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:57:49 272838] [http_stream_type_set] |scid:51818ecfce0478de|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/19 02:57:49 272856] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562F4D17D93C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:57:49 272876] [http_stream_type_set] |scid:51818ecfce0478de|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/19 02:57:49 272887] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562F4D17D93C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:57:49 272920] [http_stream_type_set] |scid:51818ecfce0478de|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/19 02:57:49 272929] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_send|ret:-610|stream_id:10|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562F4D17D93C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:57:49 272944] [http_frame_created] |scid:51818ecfce0478de|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:57:49 272957] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_send|ret:-610|stream_id:2|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562F4D17D93C|conn_state:C_INIT|flag:TICKING |from:application|to:transport|
+[2025/04/19 02:57:49 272982] [connection_state_updated] |scid:51818ecfce0478de|xqc_crypto_stream_on_write|new:C_INITIAL_SENT|
+[2025/04/19 02:57:49 273067] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:57:49 273112] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:0|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1745002669273013|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 273130] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002670023013|interv:749884|
+[2025/04/19 02:57:49 273200] [http_stream_type_set] |scid:51818ecfce0478de|xqc_h3_stream_create|local|stream_id:0|stream_type:16|
+[2025/04/19 02:57:49 273279] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_send|ret:-610|stream_id:6|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:0|fin:0|stream_flag:17|conn:0000562F4D17D93C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:57:49 273305] [http_frame_created] |scid:51818ecfce0478de|xqc_h3_stream_write_headers|stream_id:0|type:1|{name::method} {value:GET}|{name::scheme} {value:https}|{name::path}|{name:host} {value:test.xquic.com}|{name:content-type} {value:text/plain}|{name:content-length}|
+[2025/04/19 02:57:49 273323] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_send|ret:-610|stream_id:0|stream_send_offset:0|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:2|offset:0|fin:0|stream_flag:17|conn:0000562F4D17D93C|conn_state:C_INITIAL_SENT|flag:TICKING UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 02:57:49 277005] [connection_started] |scid:51818ecfce0478de|xqc_engine_packet_process|local|src_ip:127.0.0.1|src_port:51741|
+[2025/04/19 02:57:49 277049] [frames_processed] |scid:51818ecfce0478de|xqc_parse_crypto_frame|type:5|offset:0|length:123|
+[2025/04/19 02:57:49 277239] [frames_processed] |scid:51818ecfce0478de|xqc_parse_padding_frame|type:0|length:1043|
+[2025/04/19 02:57:49 277288] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:0|pkt_type:INIT|pkt_num:0|len:1216|frame_flag:PADDING CRYPTO |path_id:0|
+[2025/04/19 02:57:49 277304] [connection_state_updated] |scid:51818ecfce0478de|xqc_crypto_stream_on_read|new:C_INITIAL_RECVD|
+[2025/04/19 02:57:49 277341] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:1216|path_id:0|
+[2025/04/19 02:57:49 277350] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:1|size:1200|frame_flag:PADDING ACK |sent:1216|inflight:1200|now:1745002669277326|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 277372] [frames_processed] |scid:51818ecfce0478de|xqc_parse_crypto_frame|type:5|offset:0|length:115|
+[2025/04/19 02:57:49 277392] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:1|pkt_type:HSK|pkt_num:0|len:164|frame_flag:CRYPTO |path_id:0|
+[2025/04/19 02:57:49 277409] [connection_state_updated] |scid:51818ecfce0478de|xqc_crypto_stream_on_read|new:C_HANDSHAKE_RECVD|
+[2025/04/19 02:57:49 277418] [connection_state_updated] |scid:51818ecfce0478de|xqc_crypto_stream_on_write|new:C_HANDSHAKE_RECVD|
+[2025/04/19 02:57:49 277436] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:50|path_id:0|
+[2025/04/19 02:57:49 277444] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:1|pkt_type:HSK|pkt_num:0|size:34|frame_flag:ACK |sent:50|inflight:1200|now:1745002669277429|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 277460] [frames_processed] |scid:51818ecfce0478de|xqc_parse_crypto_frame|type:5|offset:115|length:1014|
+[2025/04/19 02:57:49 277595] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:1|pkt_type:HSK|pkt_num:1|len:1064|frame_flag:CRYPTO |path_id:0|
+[2025/04/19 02:57:49 277647] [connection_state_updated] |scid:51818ecfce0478de|xqc_crypto_stream_on_read|new:C_HANDSHAKE_RECVD|
+[2025/04/19 02:57:49 277660] [connection_state_updated] |scid:51818ecfce0478de|xqc_crypto_stream_on_write|new:C_HANDSHAKE_RECVD|
+[2025/04/19 02:57:49 277693] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:50|path_id:0|
+[2025/04/19 02:57:49 277703] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:1|pkt_type:HSK|pkt_num:1|size:34|frame_flag:ACK |sent:50|inflight:1200|now:1745002669277681|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 277723] [frames_processed] |scid:51818ecfce0478de|xqc_parse_crypto_frame|type:5|offset:1129|length:264|
+[2025/04/19 02:57:49 277788] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:1|pkt_type:HSK|pkt_num:2|len:314|frame_flag:CRYPTO |path_id:0|
+[2025/04/19 02:57:49 277797] [connection_state_updated] |scid:51818ecfce0478de|xqc_crypto_stream_on_read|new:C_HANDSHAKE_RECVD|
+[2025/04/19 02:57:49 277806] [connection_state_updated] |scid:51818ecfce0478de|xqc_crypto_stream_on_write|new:C_HANDSHAKE_RECVD|
+[2025/04/19 02:57:49 277823] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:50|path_id:0|
+[2025/04/19 02:57:49 277832] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:1|pkt_type:HSK|pkt_num:2|size:34|frame_flag:ACK |sent:50|inflight:1200|now:1745002669277817|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 277846] [frames_processed] |scid:51818ecfce0478de|xqc_parse_crypto_frame|type:5|offset:1393|length:36|
+[2025/04/19 02:57:49 278043] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:1|pkt_type:HSK|pkt_num:3|len:85|frame_flag:CRYPTO |path_id:0|
+[2025/04/19 02:57:49 278059] [connection_state_updated] |scid:51818ecfce0478de|xqc_crypto_stream_on_read|new:C_HANDSHAKE_RECVD|
+[2025/04/19 02:57:49 278074] [connection_state_updated] |scid:51818ecfce0478de|xqc_crypto_stream_on_write|new:ESTABED|
+[2025/04/19 02:57:49 278086] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002670028085|interv:750000|
+[2025/04/19 02:57:49 278098] [congestion_state_updated] |scid:51818ecfce0478de|xqc_sample_check_app_limited|new_state:application_limit|
+[2025/04/19 02:57:49 278113] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_send|ret:0|stream_id:2|stream_send_offset:1|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:1|fin:0|stream_flag:16|conn:0000562F4D17D93C|conn_state:ESTABED|flag:HSK_DONE CAN_SEND_1RTT TICKING DCID_OK UPPER_CONN_EXIST INIT_RECVD NEED_RUN ADDR_VALIDATED (null) TLS_HSK_CMPTD NO_DGRAM_NOTIFIED DGRAM_MSS_NOTIFY |from:application|to:transport|
+[2025/04/19 02:57:49 278138] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_send|ret:0|stream_id:2|stream_send_offset:16|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:15|offset:15|fin:0|stream_flag:16|conn:0000562F4D17D93C|conn_state:ESTABED|flag:HSK_DONE CAN_SEND_1RTT TICKING DCID_OK UPPER_CONN_EXIST INIT_RECVD NEED_RUN ADDR_VALIDATED (null) TLS_HSK_CMPTD NO_DGRAM_NOTIFIED DGRAM_MSS_NOTIFY |from:application|to:transport|
+[2025/04/19 02:57:49 278175] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_send|ret:0|stream_id:6|stream_send_offset:1|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:1|fin:0|stream_flag:16|conn:0000562F4D17D93C|conn_state:ESTABED|flag:HSK_DONE CAN_SEND_1RTT TICKING DCID_OK UPPER_CONN_EXIST INIT_RECVD NEED_RUN ADDR_VALIDATED (null) TLS_HSK_CMPTD NO_DGRAM_NOTIFIED DGRAM_MSS_NOTIFY |from:application|to:transport|
+[2025/04/19 02:57:49 278203] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_send|ret:0|stream_id:10|stream_send_offset:1|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:1|offset:1|fin:0|stream_flag:16|conn:0000562F4D17D93C|conn_state:ESTABED|flag:HSK_DONE CAN_SEND_1RTT TICKING DCID_OK UPPER_CONN_EXIST INIT_RECVD NEED_RUN ADDR_VALIDATED (null) TLS_HSK_CMPTD NO_DGRAM_NOTIFIED DGRAM_MSS_NOTIFY |from:application|to:transport|
+[2025/04/19 02:57:49 278222] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_send|ret:0|stream_id:0|stream_send_offset:2|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:2|offset:2|fin:0|stream_flag:16|conn:0000562F4D17D93C|conn_state:ESTABED|flag:HSK_DONE CAN_SEND_1RTT TICKING DCID_OK UPPER_CONN_EXIST INIT_RECVD NEED_RUN ADDR_VALIDATED (null) TLS_HSK_CMPTD NO_DGRAM_NOTIFIED DGRAM_MSS_NOTIFY |from:application|to:transport|
+[2025/04/19 02:57:49 278247] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_send|ret:0|stream_id:0|stream_send_offset:26|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:24|offset:24|fin:1|stream_flag:80|conn:0000562F4D17D93C|conn_state:ESTABED|flag:HSK_DONE CAN_SEND_1RTT TICKING DCID_OK UPPER_CONN_EXIST INIT_RECVD NEED_RUN ADDR_VALIDATED (null) TLS_HSK_CMPTD NO_DGRAM_NOTIFIED DGRAM_MSS_NOTIFY |from:application|to:transport|
+[2025/04/19 02:57:49 278287] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:84|path_id:0|
+[2025/04/19 02:57:49 278299] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:1|pkt_type:HSK|pkt_num:3|size:68|frame_flag:CRYPTO |sent:84|inflight:0|now:1745002669278273|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 278312] [congestion_state_updated] |scid:51818ecfce0478de|xqc_send_ctl_on_packet_sent|new_state:restart|
+[2025/04/19 02:57:49 278324] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002670028273|interv:749950|
+[2025/04/19 02:57:49 278345] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:50|path_id:0|
+[2025/04/19 02:57:49 278357] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:1|pkt_type:HSK|pkt_num:4|size:34|frame_flag:ACK |sent:50|inflight:68|now:1745002669278338|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 278379] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:49|path_id:0|
+[2025/04/19 02:57:49 278390] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:0|size:33|frame_flag:STREAM |sent:49|inflight:68|now:1745002669278372|stream_id:2|stream_offset:16|
+[2025/04/19 02:57:49 278403] [stream_state_updated] |scid:51818ecfce0478de|xqc_stream_send_state_update|stream_id:2|send_stream|old:0|new:1|
+[2025/04/19 02:57:49 278415] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002670028273|interv:749859|
+[2025/04/19 02:57:49 278433] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:34|path_id:0|
+[2025/04/19 02:57:49 278444] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:1|size:18|frame_flag:STREAM |sent:34|inflight:101|now:1745002669278427|stream_id:6|stream_offset:1|
+[2025/04/19 02:57:49 278455] [stream_state_updated] |scid:51818ecfce0478de|xqc_stream_send_state_update|stream_id:6|send_stream|old:0|new:1|
+[2025/04/19 02:57:49 278467] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002670028273|interv:749806|
+[2025/04/19 02:57:49 278495] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:34|path_id:0|
+[2025/04/19 02:57:49 278506] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:2|size:18|frame_flag:STREAM |sent:34|inflight:119|now:1745002669278488|stream_id:10|stream_offset:1|
+[2025/04/19 02:57:49 278517] [stream_state_updated] |scid:51818ecfce0478de|xqc_stream_send_state_update|stream_id:10|send_stream|old:0|new:1|
+[2025/04/19 02:57:49 278528] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002670028273|interv:749745|
+[2025/04/19 02:57:49 278547] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:59|path_id:0|
+[2025/04/19 02:57:49 278557] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:3|size:43|frame_flag:STREAM |sent:59|inflight:137|now:1745002669278540|stream_id:0|stream_offset:26|
+[2025/04/19 02:57:49 278569] [stream_state_updated] |scid:51818ecfce0478de|xqc_stream_send_state_update|stream_id:0|send_stream|old:0|new:1|
+[2025/04/19 02:57:49 278580] [stream_state_updated] |scid:51818ecfce0478de|xqc_stream_send_state_update|stream_id:0|send_stream|old:1|new:2|
+[2025/04/19 02:57:49 278591] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002670028273|interv:749682|
+[2025/04/19 02:57:49 278616] [frames_processed] |scid:51818ecfce0478de|xqc_parse_ack_frame|type:2|ack_delay:2928|ack_range:{0 - 0}|
+[2025/04/19 02:57:49 278627] [packets_acked] |scid:51818ecfce0478de|xqc_process_ack_frame|pkt_space:0|high:0|low:0|path_id:0|
+[2025/04/19 02:57:49 278639] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:0|pkt_type:INIT|pkt_num:1|len:52|frame_flag:ACK |path_id:0|
+[2025/04/19 02:57:49 278663] [frames_processed] |scid:51818ecfce0478de|xqc_parse_stream_frame|type:7|data_offset:0|data_length:16|fin:0|
+[2025/04/19 02:57:49 278689] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:0|len:49|frame_flag:STREAM |path_id:0|
+[2025/04/19 02:57:49 278704] [frames_processed] |scid:51818ecfce0478de|xqc_parse_stream_frame|type:7|data_offset:0|data_length:1|fin:0|
+[2025/04/19 02:57:49 278717] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:1|len:34|frame_flag:STREAM |path_id:0|
+[2025/04/19 02:57:49 278731] [frames_processed] |scid:51818ecfce0478de|xqc_parse_stream_frame|type:7|data_offset:0|data_length:1|fin:0|
+[2025/04/19 02:57:49 278743] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:2|len:34|frame_flag:STREAM |path_id:0|
+[2025/04/19 02:57:49 278759] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_recv|stream_id:3|read:16|recv_buf_size:4096|fin:0|stream_length:0|next_read_offset:16|conn:0000562F4D17D93C|from:transport|to:application|
+[2025/04/19 02:57:49 278772] [http_stream_type_set] |scid:51818ecfce0478de|xqc_h3_stream_process_uni|remote|stream_id:3|stream_type:0|
+[2025/04/19 02:57:49 278797] [congestion_state_updated] |scid:51818ecfce0478de|xqc_sample_check_app_limited|new_state:application_limit|
+[2025/04/19 02:57:49 278813] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_send|ret:0|stream_id:6|stream_send_offset:4|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:3|offset:3|fin:0|stream_flag:16|conn:0000562F4D17D93C|conn_state:ESTABED|flag:HSK_DONE CAN_SEND_1RTT TICKING DCID_OK UPPER_CONN_EXIST INIT_RECVD ADDR_VALIDATED (null) TLS_HSK_CMPTD NO_DGRAM_NOTIFIED DGRAM_MSS_NOTIFY |from:application|to:transport|
+[2025/04/19 02:57:49 278827] [http_frame_parsed] |scid:51818ecfce0478de|xqc_h3_stream_process_control|stream_id:3|type:4|length:13|
+[2025/04/19 02:57:49 278838] [http_parameters_set] |scid:51818ecfce0478de|xqc_h3_stream_process_control|owner:remote|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 02:57:49 278859] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_recv|stream_id:7|read:1|recv_buf_size:4096|fin:0|stream_length:0|next_read_offset:1|conn:0000562F4D17D93C|from:transport|to:application|
+[2025/04/19 02:57:49 278870] [http_stream_type_set] |scid:51818ecfce0478de|xqc_h3_stream_process_uni|remote|stream_id:7|stream_type:2|
+[2025/04/19 02:57:49 278882] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_recv|stream_id:11|read:1|recv_buf_size:4096|fin:0|stream_length:0|next_read_offset:1|conn:0000562F4D17D93C|from:transport|to:application|
+[2025/04/19 02:57:49 278894] [http_stream_type_set] |scid:51818ecfce0478de|xqc_h3_stream_process_uni|remote|stream_id:11|stream_type:3|
+[2025/04/19 02:57:49 278917] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:42|path_id:0|
+[2025/04/19 02:57:49 278927] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:4|size:26|frame_flag:ACK STREAM |sent:42|inflight:180|now:1745002669278911|stream_id:6|stream_offset:4|
+[2025/04/19 02:57:49 278939] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002670028273|interv:749334|
+[2025/04/19 02:57:49 278968] [frames_processed] |scid:51818ecfce0478de|xqc_parse_handshake_done_frame|type:19|
+[2025/04/19 02:57:49 278980] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002670031911|interv:752931|
+[2025/04/19 02:57:49 278992] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:3|len:30|frame_flag:HANDSHAKE_DONE |path_id:0|
+[2025/04/19 02:57:49 279025] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:57|path_id:0|
+[2025/04/19 02:57:49 279035] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:5|size:41|frame_flag:NEW_CONNECTION_ID |sent:57|inflight:138|now:1745002669279019|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 279050] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002670032019|interv:752970|
+[2025/04/19 02:57:49 279068] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:57|path_id:0|
+[2025/04/19 02:57:49 279078] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:6|size:41|frame_flag:NEW_CONNECTION_ID |sent:57|inflight:179|now:1745002669279062|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 279090] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002670032062|interv:752973|
+[2025/04/19 02:57:49 279109] [frames_processed] |scid:51818ecfce0478de|xqc_parse_new_token_frame|type:6|token_length:9|token:|
+[2025/04/19 02:57:49 279225] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:4|len:40|frame_flag:NEW_TOKEN |path_id:0|
+[2025/04/19 02:57:49 279263] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:34|path_id:0|
+[2025/04/19 02:57:49 279277] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:7|size:18|frame_flag:ACK |sent:34|inflight:220|now:1745002669279251|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 279301] [frames_processed] |scid:51818ecfce0478de|xqc_parse_crypto_frame|type:5|offset:0|length:241|
+[2025/04/19 02:57:49 279478] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:5|len:274|frame_flag:CRYPTO |path_id:0|
+[2025/04/19 02:57:49 279494] [connection_state_updated] |scid:51818ecfce0478de|xqc_crypto_stream_on_read|new:ESTABED|
+[2025/04/19 02:57:49 279506] [connection_state_updated] |scid:51818ecfce0478de|xqc_crypto_stream_on_write|new:ESTABED|
+[2025/04/19 02:57:49 279529] [frames_processed] |scid:51818ecfce0478de|xqc_parse_crypto_frame|type:5|offset:241|length:241|
+[2025/04/19 02:57:49 279732] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:6|len:275|frame_flag:CRYPTO |path_id:0|
+[2025/04/19 02:57:49 279756] [connection_state_updated] |scid:51818ecfce0478de|xqc_crypto_stream_on_read|new:ESTABED|
+[2025/04/19 02:57:49 279794] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:34|path_id:0|
+[2025/04/19 02:57:49 279806] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:8|size:18|frame_flag:ACK |sent:34|inflight:220|now:1745002669279779|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 279833] [frames_processed] |scid:51818ecfce0478de|xqc_parse_ack_frame|type:2|ack_delay:224|ack_range:{0 - 3}|
+[2025/04/19 02:57:49 279853] [packets_acked] |scid:51818ecfce0478de|xqc_process_ack_frame|pkt_space:1|high:3|low:0|path_id:0|
+[2025/04/19 02:57:49 279868] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:1|pkt_type:HSK|pkt_num:4|len:50|frame_flag:ACK |path_id:0|
+[2025/04/19 02:57:49 279891] [frames_processed] |scid:51818ecfce0478de|xqc_parse_new_conn_id_frame|type:14|sequence_number:1|retire_prior_to:140726493241304|connection_id_length:8|connection_id:ecb234aa2fcf1551|
+[2025/04/19 02:57:49 279909] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:7|len:57|frame_flag:NEW_CONNECTION_ID |path_id:0|
+[2025/04/19 02:57:49 279927] [frames_processed] |scid:51818ecfce0478de|xqc_parse_new_conn_id_frame|type:14|sequence_number:2|retire_prior_to:140726493241304|connection_id_length:8|connection_id:929058f60749911d|
+[2025/04/19 02:57:49 279951] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:8|len:57|frame_flag:NEW_CONNECTION_ID |path_id:0|
+[2025/04/19 02:57:49 279987] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:34|path_id:0|
+[2025/04/19 02:57:49 279998] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:9|size:18|frame_flag:ACK |sent:34|inflight:220|now:1745002669279974|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 280201] [frames_processed] |scid:51818ecfce0478de|xqc_parse_stream_frame|type:7|data_offset:1|data_length:3|fin:0|
+[2025/04/19 02:57:49 280226] [frames_processed] |scid:51818ecfce0478de|xqc_parse_ack_frame|type:2|ack_delay:568|ack_range:{0 - 4}|
+[2025/04/19 02:57:49 280236] [packets_acked] |scid:51818ecfce0478de|xqc_process_ack_frame|pkt_space:2|high:4|low:0|path_id:0|
+[2025/04/19 02:57:49 280248] [stream_state_updated] |scid:51818ecfce0478de|xqc_stream_send_state_update|stream_id:0|send_stream|old:2|new:3|
+[2025/04/19 02:57:49 280261] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002669285903|interv:5643|
+[2025/04/19 02:57:49 280274] [rec_metrics_updated] |scid:51818ecfce0478de|xqc_send_ctl_on_ack_received|cwnd:137994|inflight:82|mode:0|applimit:180|pacing_rate:310471936|bw:71912|srtt:1281|latest_rtt:1281|ctl_rttvar:0|pto_count:1281|min_rtt:10|send:0|lost:0|tlp:16|recv:1889786448|
+[2025/04/19 02:57:49 280287] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:9|len:43|frame_flag:ACK STREAM |path_id:0|
+[2025/04/19 02:57:49 280300] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_recv|stream_id:7|read:3|recv_buf_size:4096|fin:0|stream_length:0|next_read_offset:4|conn:0000562F4D17D93C|from:transport|to:application|
+[2025/04/19 02:57:49 280325] [frames_processed] |scid:51818ecfce0478de|xqc_parse_stream_frame|type:7|data_offset:0|data_length:1403|fin:0|
+[2025/04/19 02:57:49 280336] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:10|len:1436|frame_flag:STREAM |path_id:0|
+[2025/04/19 02:57:49 280347] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_recv|stream_id:0|read:1403|recv_buf_size:4096|fin:0|stream_length:0|next_read_offset:1403|conn:0000562F4D17D93C|from:transport|to:application|
+[2025/04/19 02:57:49 280368] [http_frame_parsed] |scid:51818ecfce0478de|xqc_h3_stream_process_request|stream_id:0|type:1|length:3|
+[2025/04/19 02:57:49 280449] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:34|path_id:0|
+[2025/04/19 02:57:49 280471] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:10|size:18|frame_flag:ACK |sent:34|inflight:82|now:1745002669280436|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 280502] [frames_processed] |scid:51818ecfce0478de|xqc_parse_stream_frame|type:7|data_offset:1403|data_length:653|fin:1|
+[2025/04/19 02:57:49 280516] [stream_state_updated] |scid:51818ecfce0478de|xqc_stream_recv_state_update|stream_id:0|recv_stream|old:0|new:1|
+[2025/04/19 02:57:49 280528] [stream_state_updated] |scid:51818ecfce0478de|xqc_stream_recv_state_update|stream_id:0|recv_stream|old:1|new:2|
+[2025/04/19 02:57:49 280542] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:11|len:688|frame_flag:STREAM |path_id:0|
+[2025/04/19 02:57:49 280558] [frames_processed] |scid:51818ecfce0478de|xqc_parse_ack_frame|type:2|ack_delay:24|ack_range:{0 - 6}|
+[2025/04/19 02:57:49 280569] [packets_acked] |scid:51818ecfce0478de|xqc_process_ack_frame|pkt_space:2|high:6|low:0|path_id:0|
+[2025/04/19 02:57:49 280583] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_unset|event_type:cancel|type:LOSS_DETECTION|
+[2025/04/19 02:57:49 280596] [rec_metrics_updated] |scid:51818ecfce0478de|xqc_send_ctl_on_ack_received|cwnd:138076|inflight:0|mode:0|applimit:0|pacing_rate:310471936|bw:96406|srtt:1304|latest_rtt:1493|ctl_rttvar:0|pto_count:1281|min_rtt:10|send:0|lost:0|tlp:19|recv:1889786448|
+[2025/04/19 02:57:49 280610] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:12|len:34|frame_flag:ACK |path_id:0|
+[2025/04/19 02:57:49 280624] [stream_state_updated] |scid:51818ecfce0478de|xqc_stream_recv_state_update|stream_id:0|recv_stream|old:2|new:3|
+[2025/04/19 02:57:49 280636] [stream_data_moved] |scid:51818ecfce0478de|xqc_stream_recv|stream_id:0|read:653|recv_buf_size:4096|fin:1|stream_length:2056|next_read_offset:2056|conn:0000562F4D17D93C|from:transport|to:application|
+[2025/04/19 02:57:49 280651] [http_frame_parsed] |scid:51818ecfce0478de|xqc_h3_stream_process_request|stream_id:0|type:0|length:2048|
+[2025/04/19 02:57:49 306003] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:35|path_id:0|
+[2025/04/19 02:57:49 306109] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:11|size:19|frame_flag:ACK |sent:35|inflight:0|now:1745002669305956|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 366335] [report] |scid:51818ecfce0478de|xqc_h3_request_destroy|stream_id:0|close_msg:finished|err:0|rcvd_bdy_sz:2048|snd_bdy_sz:0|rcvd_hdr_sz:22|snd_hdr_sz:81|create:1745002669273249|blkd:0|nblkd:0|hdr_b:7116|hdr_e:7128|bdy_b:7172|fin:7399|recv_end:7417|hrd_send:91|bdy_send:0|fin_send:5291|fin_ack:6999|last_send:32707|last_recv:7306|mp_state:0|path_info:(1,0,0/0/1/a/a,26,2056,0,0,5)#0-1-2-26-2056-1304-2|comp_hdr_s:24|comp_hdr_r:3|fst_fin_snd:5291|sched_blk:0|sched_blk_time:0|cwnd_blk:0|cwnd_blk_time:0|pacing_blk:0|pacing_blk_time:0|begin_state:(0,134,1,0,0,388393,250)|end_state:(0,134,0,0,0,388393,250)|is_fec_protected:0|fec_reco_pkt_cnt:0|fec_block_size_mode:0|fst_rpr_ts:0|last_rpr_ts:0|
+[2025/04/19 02:57:49 366454] [loss_timer_updated] |scid:51818ecfce0478de|xqc_timer_unset|event_type:cancel|type:LOSS_DETECTION|
+[2025/04/19 02:57:49 366467] [connection_state_updated] |scid:51818ecfce0478de|xqc_conn_immediate_close|new:CLOSING|
+[2025/04/19 02:57:49 366596] [datagrams_sent] |scid:51818ecfce0478de|xqc_send|size:33|path_id:0|
+[2025/04/19 02:57:49 366615] [packet_sent] |scid:51818ecfce0478de|xqc_send_packet_with_pn|<==|conn:0000562F4D17D93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:12|size:17|frame_flag:CONNECTION_CLOSE |sent:33|inflight:0|now:1745002669366563|stream_id:0|stream_offset:0|
+[2025/04/19 02:57:49 367690] [frames_processed] |scid:51818ecfce0478de|xqc_parse_conn_close_frame|type:18|err_code:0|
+[2025/04/19 02:57:49 367743] [connection_state_updated] |scid:51818ecfce0478de|xqc_process_conn_close_frame|new:DRAINING|
+[2025/04/19 02:57:49 367758] [packet_received] |scid:51818ecfce0478de|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:13|len:33|frame_flag:CONNECTION_CLOSE |path_id:0|
+[2025/04/19 02:57:49 456059] [connection_state_updated] |scid:51818ecfce0478de|xqc_engine_process_conn|new:CLOSED|
+[2025/04/19 02:57:49 456164] [report] |scid:51818ecfce0478de|xqc_conn_destroy|0000562F4D17D93C|has_0rtt:0|0rtt_accept:0|token_ok:-1|handshake_time:5846|first_send_delay:1129|conn_persist:183971|keyupdate_cnt:0|err:0x0|close_msg:local close|l-127.0.0.1-51741-51818ecfce0478de p-127.0.0.1-8443-ad7a09eb8a1559e0|hsk_recv:5174|close_recv:95550|close_send:94370|last_recv:95488|last_send:94370|mp_enable:0|create:1|validated:1|active:1|path_info:0/0/1/a/a,1,1,1,0,0,0,0,0,0,0,20,21,21,47,0,2077,i96,4,679,688,80,11,8,0,4,25,34,4,12,8,0,4,24,33,40000,13,95,0,4,19,4,11,33,4,17,40000,12,94,4,18,4,10,8,0-2,0-2,0-0,0-0,0-0,0-1,0-3252,0-6029,0-10,0-21,0-0,0-0,0-0,0-0,0-0,0-0,0-0,0-0|alpn:h3|rebind_count:0|rebind_valid:0|rtx_pkt:0|tlp_pkt:0|snd_pkt:10|spurious_loss:0|detected_loss:0|max_pto:0|finished_streams:1|cli_bidi_s:1|svr_bidi_s:0|fec_exist:0|fec_ensch:NO_FEC|fec_desch:NO_FEC|fec_neg_fail:0|fec_mp_mode:NO_FEC|send_fec_pkts:0|recovered_fec_num:0|max_po_size:1200|max_probing_size:1420|ppo_size:1420|
+[2025/04/19 02:57:49 456186] [connection_closed] |scid:51818ecfce0478de|xqc_conn_destroy|err_code:0|mtu_updatad_count:0|pkt_dropped:0|
+[2025/04/19 03:00:11 328458] [connection_state_updated] |scid:2bf69c005508726b|xqc_conn_create|new:C_INIT|
+[2025/04/19 03:00:11 328616] [rec_parameters_set] |scid:2bf69c005508726b|xqc_send_ctl_create|reordering_threshold:3|time_threshold:3|timer_granularity:2|initial_rtt:250|initial_congestion_window:96|minimum_congestion_window:0|
+[2025/04/19 03:00:11 328639] [path_assigned] |scid:2bf69c005508726b|xqc_conn_create_path_inner|path_id:0|local_addr:addr or cid not avail|peer_addr:addr or cid not avail|dcid:3338fb009b266628|scid:2bf69c005508726b|
+[2025/04/19 03:00:11 328650] [tra_parameters_set] |scid:2bf69c005508726b|xqc_conn_create|local|migration:1|max_idle_timeout:120000|max_udp_payload_size:1500|active_connection_id_limit:8|max_data:0|
+[2025/04/19 03:00:11 329653] [connection_started] |scid:2bf69c005508726b|xqc_client_connect|remote|dst_ip:127.0.0.1|dst_port:8443|scid:2bf69c005508726b|dcid:3338fb009b266628|
+[2025/04/19 03:00:11 329731] [http_parameters_set] |scid:2bf69c005508726b|xqc_h3_conn_create|owner:local|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 03:00:11 329759] [http_stream_type_set] |scid:2bf69c005508726b|xqc_h3_stream_create|local|stream_id:2|stream_type:0|
+[2025/04/19 03:00:11 329772] [congestion_state_updated] |scid:2bf69c005508726b|xqc_sample_check_app_limited|new_state:application_limit|
+[2025/04/19 03:00:11 329797] [stream_data_moved] |scid:2bf69c005508726b|xqc_stream_send|ret:0|stream_id:2|stream_send_offset:1|pkt_type:0RTT|buff_1rtt:0|send_data_size:1|offset:1|fin:0|stream_flag:24|conn:000055E518B7A93C|conn_state:C_INIT|flag:TICKING HAS_0RTT |from:application|to:transport|
+[2025/04/19 03:00:11 329820] [http_stream_type_set] |scid:2bf69c005508726b|xqc_h3_stream_create|local|stream_id:6|stream_type:2|
+[2025/04/19 03:00:11 329833] [stream_data_moved] |scid:2bf69c005508726b|xqc_stream_send|ret:0|stream_id:6|stream_send_offset:1|pkt_type:0RTT|buff_1rtt:0|send_data_size:1|offset:1|fin:0|stream_flag:24|conn:000055E518B7A93C|conn_state:C_INIT|flag:TICKING HAS_0RTT |from:application|to:transport|
+[2025/04/19 03:00:11 329845] [http_stream_type_set] |scid:2bf69c005508726b|xqc_h3_stream_create|local|stream_id:10|stream_type:3|
+[2025/04/19 03:00:11 329857] [stream_data_moved] |scid:2bf69c005508726b|xqc_stream_send|ret:0|stream_id:10|stream_send_offset:1|pkt_type:0RTT|buff_1rtt:0|send_data_size:1|offset:1|fin:0|stream_flag:24|conn:000055E518B7A93C|conn_state:C_INIT|flag:TICKING HAS_0RTT |from:application|to:transport|
+[2025/04/19 03:00:11 329895] [http_frame_created] |scid:2bf69c005508726b|xqc_h3_stream_write_setting_to_buffer|stream_id:2|type:4|max_field_section_size:32768|max_pushes:0||qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 03:00:11 329908] [stream_data_moved] |scid:2bf69c005508726b|xqc_stream_send|ret:0|stream_id:2|stream_send_offset:16|pkt_type:0RTT|buff_1rtt:0|send_data_size:15|offset:15|fin:0|stream_flag:24|conn:000055E518B7A93C|conn_state:C_INIT|flag:TICKING HAS_0RTT |from:application|to:transport|
+[2025/04/19 03:00:11 329926] [connection_state_updated] |scid:2bf69c005508726b|xqc_crypto_stream_on_write|new:C_INITIAL_SENT|
+[2025/04/19 03:00:11 329989] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:1216|path_id:0|
+[2025/04/19 03:00:11 330000] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:0|size:1200|frame_flag:PADDING CRYPTO |sent:1216|inflight:0|now:1745002811329957|stream_id:0|stream_offset:0|
+[2025/04/19 03:00:11 330011] [congestion_state_updated] |scid:2bf69c005508726b|xqc_send_ctl_on_packet_sent|new_state:restart|
+[2025/04/19 03:00:11 330022] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002812079957|interv:749937|
+[2025/04/19 03:00:11 330041] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:50|path_id:0|
+[2025/04/19 03:00:11 330050] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:2|pkt_type:0RTT|pkt_num:0|size:34|frame_flag:STREAM |sent:50|inflight:1200|now:1745002811330034|stream_id:2|stream_offset:1|
+[2025/04/19 03:00:11 330060] [stream_state_updated] |scid:2bf69c005508726b|xqc_stream_send_state_update|stream_id:2|send_stream|old:0|new:1|
+[2025/04/19 03:00:11 330069] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002812079957|interv:749888|
+[2025/04/19 03:00:11 330084] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:50|path_id:0|
+[2025/04/19 03:00:11 330093] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:2|pkt_type:0RTT|pkt_num:1|size:34|frame_flag:STREAM |sent:50|inflight:1234|now:1745002811330079|stream_id:6|stream_offset:1|
+[2025/04/19 03:00:11 330102] [stream_state_updated] |scid:2bf69c005508726b|xqc_stream_send_state_update|stream_id:6|send_stream|old:0|new:1|
+[2025/04/19 03:00:11 330110] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002812079957|interv:749847|
+[2025/04/19 03:00:11 330125] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:50|path_id:0|
+[2025/04/19 03:00:11 330133] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:2|pkt_type:0RTT|pkt_num:2|size:34|frame_flag:STREAM |sent:50|inflight:1268|now:1745002811330120|stream_id:10|stream_offset:1|
+[2025/04/19 03:00:11 330143] [stream_state_updated] |scid:2bf69c005508726b|xqc_stream_send_state_update|stream_id:10|send_stream|old:0|new:1|
+[2025/04/19 03:00:11 330151] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002812079957|interv:749806|
+[2025/04/19 03:00:11 330166] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:65|path_id:0|
+[2025/04/19 03:00:11 330174] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:2|pkt_type:0RTT|pkt_num:3|size:49|frame_flag:STREAM |sent:65|inflight:1302|now:1745002811330161|stream_id:2|stream_offset:16|
+[2025/04/19 03:00:11 330183] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002812079957|interv:749774|
+[2025/04/19 03:00:11 330256] [http_stream_type_set] |scid:2bf69c005508726b|xqc_h3_stream_create|local|stream_id:0|stream_type:16|
+[2025/04/19 03:00:11 330352] [http_frame_created] |scid:2bf69c005508726b|xqc_h3_stream_write_headers|stream_id:0|type:1|{name::method} {value:GET}|{name::scheme} {value:https}|{name::path}|{name:host} {value:test.xquic.com}|{name:content-type} {value:text/plain}|{name:content-length}|
+[2025/04/19 03:00:11 330367] [congestion_state_updated] |scid:2bf69c005508726b|xqc_sample_check_app_limited|new_state:application_limit|
+[2025/04/19 03:00:11 330382] [stream_data_moved] |scid:2bf69c005508726b|xqc_stream_send|ret:0|stream_id:0|stream_send_offset:2|pkt_type:0RTT|buff_1rtt:0|send_data_size:2|offset:2|fin:0|stream_flag:24|conn:000055E518B7A93C|conn_state:C_INITIAL_SENT|flag:TICKING HAS_0RTT UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 03:00:11 330395] [stream_data_moved] |scid:2bf69c005508726b|xqc_stream_send|ret:0|stream_id:0|stream_send_offset:26|pkt_type:0RTT|buff_1rtt:0|send_data_size:24|offset:24|fin:1|stream_flag:88|conn:000055E518B7A93C|conn_state:C_INITIAL_SENT|flag:TICKING HAS_0RTT UPPER_CONN_EXIST |from:application|to:transport|
+[2025/04/19 03:00:11 330425] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:75|path_id:0|
+[2025/04/19 03:00:11 330434] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:2|pkt_type:0RTT|pkt_num:4|size:59|frame_flag:STREAM |sent:75|inflight:1351|now:1745002811330413|stream_id:0|stream_offset:26|
+[2025/04/19 03:00:11 330445] [stream_state_updated] |scid:2bf69c005508726b|xqc_stream_send_state_update|stream_id:0|send_stream|old:0|new:1|
+[2025/04/19 03:00:11 330453] [stream_state_updated] |scid:2bf69c005508726b|xqc_stream_send_state_update|stream_id:0|send_stream|old:1|new:2|
+[2025/04/19 03:00:11 330462] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002812079957|interv:749496|
+[2025/04/19 03:00:11 332437] [connection_started] |scid:2bf69c005508726b|xqc_engine_packet_process|local|src_ip:127.0.0.1|src_port:53110|
+[2025/04/19 03:00:11 332482] [frames_processed] |scid:2bf69c005508726b|xqc_parse_crypto_frame|type:5|offset:0|length:129|
+[2025/04/19 03:00:11 332678] [frames_processed] |scid:2bf69c005508726b|xqc_parse_padding_frame|type:0|length:1028|
+[2025/04/19 03:00:11 332701] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:0|pkt_type:INIT|pkt_num:0|len:1216|frame_flag:PADDING CRYPTO |path_id:0|
+[2025/04/19 03:00:11 332715] [connection_state_updated] |scid:2bf69c005508726b|xqc_crypto_stream_on_read|new:C_INITIAL_RECVD|
+[2025/04/19 03:00:11 332745] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:1216|path_id:0|
+[2025/04/19 03:00:11 332755] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:0|pkt_type:INIT|pkt_num:1|size:1200|frame_flag:PADDING ACK |sent:1216|inflight:1410|now:1745002811332732|stream_id:0|stream_offset:0|
+[2025/04/19 03:00:11 332775] [frames_processed] |scid:2bf69c005508726b|xqc_parse_crypto_frame|type:5|offset:0|length:119|
+[2025/04/19 03:00:11 332798] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:1|pkt_type:HSK|pkt_num:0|len:168|frame_flag:CRYPTO |path_id:0|
+[2025/04/19 03:00:11 332807] [connection_state_updated] |scid:2bf69c005508726b|xqc_crypto_stream_on_read|new:C_HANDSHAKE_RECVD|
+[2025/04/19 03:00:11 332816] [connection_state_updated] |scid:2bf69c005508726b|xqc_crypto_stream_on_write|new:C_HANDSHAKE_RECVD|
+[2025/04/19 03:00:11 332833] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:50|path_id:0|
+[2025/04/19 03:00:11 332842] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:1|pkt_type:HSK|pkt_num:0|size:34|frame_flag:ACK |sent:50|inflight:1410|now:1745002811332827|stream_id:0|stream_offset:0|
+[2025/04/19 03:00:11 332857] [frames_processed] |scid:2bf69c005508726b|xqc_parse_crypto_frame|type:5|offset:119|length:36|
+[2025/04/19 03:00:11 333114] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:1|pkt_type:HSK|pkt_num:1|len:85|frame_flag:CRYPTO |path_id:0|
+[2025/04/19 03:00:11 333149] [connection_state_updated] |scid:2bf69c005508726b|xqc_crypto_stream_on_read|new:C_HANDSHAKE_RECVD|
+[2025/04/19 03:00:11 333167] [connection_state_updated] |scid:2bf69c005508726b|xqc_crypto_stream_on_write|new:ESTABED|
+[2025/04/19 03:00:11 333184] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:18446744073709551615|interv:18444999070898218431|
+[2025/04/19 03:00:11 333217] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:84|path_id:0|
+[2025/04/19 03:00:11 333226] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:1|pkt_type:HSK|pkt_num:1|size:68|frame_flag:CRYPTO |sent:84|inflight:210|now:1745002811333205|stream_id:0|stream_offset:0|
+[2025/04/19 03:00:11 333237] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002812083205|interv:749968|
+[2025/04/19 03:00:11 333254] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:50|path_id:0|
+[2025/04/19 03:00:11 333262] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:1|pkt_type:HSK|pkt_num:2|size:34|frame_flag:ACK |sent:50|inflight:278|now:1745002811333248|stream_id:0|stream_offset:0|
+[2025/04/19 03:00:11 333281] [frames_processed] |scid:2bf69c005508726b|xqc_parse_ack_frame|type:2|ack_delay:1616|ack_range:{0 - 0}|
+[2025/04/19 03:00:11 333290] [packets_acked] |scid:2bf69c005508726b|xqc_process_ack_frame|pkt_space:0|high:0|low:0|path_id:0|
+[2025/04/19 03:00:11 333301] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:0|pkt_type:INIT|pkt_num:1|len:61|frame_flag:ACK |path_id:0|
+[2025/04/19 03:00:11 333316] [frames_processed] |scid:2bf69c005508726b|xqc_parse_stream_frame|type:7|data_offset:0|data_length:16|fin:0|
+[2025/04/19 03:00:11 333330] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:0|len:49|frame_flag:STREAM |path_id:0|
+[2025/04/19 03:00:11 333341] [frames_processed] |scid:2bf69c005508726b|xqc_parse_stream_frame|type:7|data_offset:0|data_length:1|fin:0|
+[2025/04/19 03:00:11 333352] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:1|len:34|frame_flag:STREAM |path_id:0|
+[2025/04/19 03:00:11 333363] [frames_processed] |scid:2bf69c005508726b|xqc_parse_stream_frame|type:7|data_offset:0|data_length:1|fin:0|
+[2025/04/19 03:00:11 333373] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:2|len:34|frame_flag:STREAM |path_id:0|
+[2025/04/19 03:00:11 333384] [frames_processed] |scid:2bf69c005508726b|xqc_parse_stream_frame|type:7|data_offset:1|data_length:3|fin:0|
+[2025/04/19 03:00:11 333393] [frames_processed] |scid:2bf69c005508726b|xqc_parse_ack_frame|type:2|ack_delay:416|ack_range:{0 - 4}|
+[2025/04/19 03:00:11 333402] [packets_acked] |scid:2bf69c005508726b|xqc_process_ack_frame|pkt_space:2|high:4|low:0|path_id:0|
+[2025/04/19 03:00:11 333412] [stream_state_updated] |scid:2bf69c005508726b|xqc_stream_send_state_update|stream_id:0|send_stream|old:2|new:3|
+[2025/04/19 03:00:11 333423] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002811342115|interv:8692|
+[2025/04/19 03:00:11 333436] [rec_metrics_updated] |scid:2bf69c005508726b|xqc_send_ctl_on_ack_received|cwnd:138066|inflight:68|mode:0|applimit:1351|pacing_rate:133910624|bw:61295|srtt:2970|latest_rtt:2970|ctl_rttvar:0|pto_count:2970|min_rtt:8|send:0|lost:0|tlp:7|recv:763883504|
+[2025/04/19 03:00:11 333447] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:3|len:42|frame_flag:ACK STREAM |path_id:0|
+[2025/04/19 03:00:11 333459] [stream_data_moved] |scid:2bf69c005508726b|xqc_stream_recv|stream_id:3|read:16|recv_buf_size:4096|fin:0|stream_length:0|next_read_offset:16|conn:000055E518B7A93C|from:transport|to:application|
+[2025/04/19 03:00:11 333470] [http_stream_type_set] |scid:2bf69c005508726b|xqc_h3_stream_process_uni|remote|stream_id:3|stream_type:0|
+[2025/04/19 03:00:11 333502] [congestion_state_updated] |scid:2bf69c005508726b|xqc_sample_check_app_limited|new_state:application_limit|
+[2025/04/19 03:00:11 333514] [stream_data_moved] |scid:2bf69c005508726b|xqc_stream_send|ret:0|stream_id:6|stream_send_offset:4|pkt_type:SHORT_HEADER|buff_1rtt:0|send_data_size:3|offset:3|fin:0|stream_flag:24|conn:000055E518B7A93C|conn_state:ESTABED|flag:HSK_DONE CAN_SEND_1RTT TICKING DCID_OK HAS_0RTT 0RTT_OK UPPER_CONN_EXIST INIT_RECVD NEED_RUN ADDR_VALIDATED (null) TLS_HSK_CMPTD NO_DGRAM_NOTIFIED DGRAM_MSS_NOTIFY |from:application|to:transport|
+[2025/04/19 03:00:11 333526] [http_frame_parsed] |scid:2bf69c005508726b|xqc_h3_stream_process_control|stream_id:3|type:4|length:13|
+[2025/04/19 03:00:11 333535] [http_parameters_set] |scid:2bf69c005508726b|xqc_h3_stream_process_control|owner:remote|max_field_section_size:32768|qpack_max_table_capacity:16384|qpack_blocked_streams:64|
+[2025/04/19 03:00:11 333546] [stream_data_moved] |scid:2bf69c005508726b|xqc_stream_recv|stream_id:7|read:4|recv_buf_size:4096|fin:0|stream_length:0|next_read_offset:4|conn:000055E518B7A93C|from:transport|to:application|
+[2025/04/19 03:00:11 333555] [http_stream_type_set] |scid:2bf69c005508726b|xqc_h3_stream_process_uni|remote|stream_id:7|stream_type:2|
+[2025/04/19 03:00:11 333570] [stream_data_moved] |scid:2bf69c005508726b|xqc_stream_recv|stream_id:11|read:1|recv_buf_size:4096|fin:0|stream_length:0|next_read_offset:1|conn:000055E518B7A93C|from:transport|to:application|
+[2025/04/19 03:00:11 333580] [http_stream_type_set] |scid:2bf69c005508726b|xqc_h3_stream_process_uni|remote|stream_id:11|stream_type:3|
+[2025/04/19 03:00:11 333598] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:42|path_id:0|
+[2025/04/19 03:00:11 333606] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:5|size:26|frame_flag:ACK STREAM |sent:42|inflight:68|now:1745002811333591|stream_id:6|stream_offset:4|
+[2025/04/19 03:00:11 333617] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002811342115|interv:8499|
+[2025/04/19 03:00:11 333631] [frames_processed] |scid:2bf69c005508726b|xqc_parse_stream_frame|type:7|data_offset:0|data_length:1403|fin:0|
+[2025/04/19 03:00:11 333641] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:4|len:1436|frame_flag:STREAM |path_id:0|
+[2025/04/19 03:00:11 333653] [frames_processed] |scid:2bf69c005508726b|xqc_parse_stream_frame|type:7|data_offset:1403|data_length:653|fin:1|
+[2025/04/19 03:00:11 333662] [stream_state_updated] |scid:2bf69c005508726b|xqc_stream_recv_state_update|stream_id:0|recv_stream|old:0|new:1|
+[2025/04/19 03:00:11 333671] [stream_state_updated] |scid:2bf69c005508726b|xqc_stream_recv_state_update|stream_id:0|recv_stream|old:1|new:2|
+[2025/04/19 03:00:11 333680] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:5|len:688|frame_flag:STREAM |path_id:0|
+[2025/04/19 03:00:11 333691] [stream_state_updated] |scid:2bf69c005508726b|xqc_stream_recv_state_update|stream_id:0|recv_stream|old:2|new:3|
+[2025/04/19 03:00:11 333700] [stream_data_moved] |scid:2bf69c005508726b|xqc_stream_recv|stream_id:0|read:2056|recv_buf_size:4096|fin:1|stream_length:2056|next_read_offset:2056|conn:000055E518B7A93C|from:transport|to:application|
+[2025/04/19 03:00:11 333713] [http_frame_parsed] |scid:2bf69c005508726b|xqc_h3_stream_process_request|stream_id:0|type:1|length:3|
+[2025/04/19 03:00:11 333765] [http_frame_parsed] |scid:2bf69c005508726b|xqc_h3_stream_process_request|stream_id:0|type:0|length:2048|
+[2025/04/19 03:00:11 333863] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:34|path_id:0|
+[2025/04/19 03:00:11 333881] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:6|size:18|frame_flag:ACK |sent:34|inflight:94|now:1745002811333851|stream_id:0|stream_offset:0|
+[2025/04/19 03:00:11 334247] [frames_processed] |scid:2bf69c005508726b|xqc_parse_handshake_done_frame|type:19|
+[2025/04/19 03:00:11 334272] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002811345501|interv:11230|
+[2025/04/19 03:00:11 334285] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:6|len:30|frame_flag:HANDSHAKE_DONE |path_id:0|
+[2025/04/19 03:00:11 334329] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:57|path_id:0|
+[2025/04/19 03:00:11 334340] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:7|size:41|frame_flag:NEW_CONNECTION_ID |sent:57|inflight:26|now:1745002811334316|stream_id:0|stream_offset:0|
+[2025/04/19 03:00:11 334353] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002811346226|interv:11874|
+[2025/04/19 03:00:11 334372] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:57|path_id:0|
+[2025/04/19 03:00:11 334382] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:8|size:41|frame_flag:NEW_CONNECTION_ID |sent:57|inflight:67|now:1745002811334365|stream_id:0|stream_offset:0|
+[2025/04/19 03:00:11 334402] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002811346275|interv:11874|
+[2025/04/19 03:00:11 334427] [frames_processed] |scid:2bf69c005508726b|xqc_parse_ack_frame|type:2|ack_delay:120|ack_range:{0 - 1}|
+[2025/04/19 03:00:11 334437] [packets_acked] |scid:2bf69c005508726b|xqc_process_ack_frame|pkt_space:1|high:1|low:0|path_id:0|
+[2025/04/19 03:00:11 334447] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:1|pkt_type:HSK|pkt_num:2|len:50|frame_flag:ACK |path_id:0|
+[2025/04/19 03:00:11 334464] [frames_processed] |scid:2bf69c005508726b|xqc_parse_new_conn_id_frame|type:14|sequence_number:1|retire_prior_to:140733957272952|connection_id_length:8|connection_id:fb7e5ef1745739bb|
+[2025/04/19 03:00:11 334477] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:7|len:57|frame_flag:NEW_CONNECTION_ID |path_id:0|
+[2025/04/19 03:00:11 334500] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:34|path_id:0|
+[2025/04/19 03:00:11 334509] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:9|size:18|frame_flag:ACK |sent:34|inflight:108|now:1745002811334491|stream_id:0|stream_offset:0|
+[2025/04/19 03:00:11 334523] [frames_processed] |scid:2bf69c005508726b|xqc_parse_new_conn_id_frame|type:14|sequence_number:2|retire_prior_to:140733957272952|connection_id_length:8|connection_id:5ecee5217b09b814|
+[2025/04/19 03:00:11 334533] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:8|len:57|frame_flag:NEW_CONNECTION_ID |path_id:0|
+[2025/04/19 03:00:11 335092] [frames_processed] |scid:2bf69c005508726b|xqc_parse_ack_frame|type:2|ack_delay:40|ack_range:{5 - 7}|
+[2025/04/19 03:00:11 335112] [packets_acked] |scid:2bf69c005508726b|xqc_process_ack_frame|pkt_space:2|high:7|low:5|path_id:0|
+[2025/04/19 03:00:11 335125] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_set|event_type:set|type:LOSS_DETECTION|expire:1745002811346750|interv:11625|
+[2025/04/19 03:00:11 335136] [rec_metrics_updated] |scid:2bf69c005508726b|xqc_send_ctl_on_ack_received|cwnd:138133|inflight:41|mode:0|applimit:278|pacing_rate:133910624|bw:61295|srtt:2689|latest_rtt:767|ctl_rttvar:0|pto_count:767|min_rtt:11|send:0|lost:0|tlp:14|recv:763883504|
+[2025/04/19 03:00:11 335148] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:9|len:34|frame_flag:ACK |path_id:0|
+[2025/04/19 03:00:11 344796] [frames_processed] |scid:2bf69c005508726b|xqc_parse_ack_frame|type:2|ack_delay:9448|ack_range:{5 - 9}|
+[2025/04/19 03:00:11 344957] [packets_acked] |scid:2bf69c005508726b|xqc_process_ack_frame|pkt_space:2|high:9|low:5|path_id:0|
+[2025/04/19 03:00:11 344995] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_unset|event_type:cancel|type:LOSS_DETECTION|
+[2025/04/19 03:00:11 345025] [rec_metrics_updated] |scid:2bf69c005508726b|xqc_send_ctl_on_ack_received|cwnd:138174|inflight:0|mode:0|applimit:0|pacing_rate:133910624|bw:61295|srtt:3277|latest_rtt:10398|ctl_rttvar:0|pto_count:767|min_rtt:11|send:0|lost:0|tlp:15|recv:763883504|
+[2025/04/19 03:00:11 345062] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:10|len:35|frame_flag:ACK |path_id:0|
+[2025/04/19 03:00:11 362978] [frames_processed] |scid:2bf69c005508726b|xqc_parse_new_conn_id_frame|type:14|sequence_number:2|retire_prior_to:140733957272952|connection_id_length:8|connection_id:5ecee5217b09b814|
+[2025/04/19 03:00:11 363050] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:11|len:57|frame_flag:NEW_CONNECTION_ID |path_id:0|
+[2025/04/19 03:00:11 363098] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:34|path_id:0|
+[2025/04/19 03:00:11 363109] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:10|size:18|frame_flag:ACK |sent:34|inflight:0|now:1745002811363082|stream_id:0|stream_offset:0|
+[2025/04/19 03:00:11 370645] [frames_processed] |scid:2bf69c005508726b|xqc_parse_new_conn_id_frame|type:14|sequence_number:2|retire_prior_to:140733957272952|connection_id_length:8|connection_id:5ecee5217b09b814|
+[2025/04/19 03:00:11 370706] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:12|len:57|frame_flag:NEW_CONNECTION_ID |path_id:0|
+[2025/04/19 03:00:11 396443] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:35|path_id:0|
+[2025/04/19 03:00:11 396595] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:11|size:19|frame_flag:ACK |sent:35|inflight:0|now:1745002811396384|stream_id:0|stream_offset:0|
+[2025/04/19 03:00:11 435834] [report] |scid:2bf69c005508726b|xqc_h3_request_destroy|stream_id:0|close_msg:finished|err:0|rcvd_bdy_sz:2048|snd_bdy_sz:0|rcvd_hdr_sz:22|snd_hdr_sz:81|create:1745002811330312|blkd:0|nblkd:0|hdr_b:3398|hdr_e:3410|bdy_b:3453|fin:3397|recv_end:3472|hrd_send:162|bdy_send:0|fin_send:101|fin_ack:3100|last_send:66072|last_recv:40313|mp_state:0|path_info:(1,0,0/0/1/a/a,26,2056,0,0,4)#0-1-2-26-2056-3277-2|comp_hdr_s:24|comp_hdr_r:3|fst_fin_snd:101|sched_blk:0|sched_blk_time:0|cwnd_blk:0|cwnd_blk_time:0|pacing_blk:0|pacing_blk_time:0|begin_state:(0,134,1,0,0,388393,250)|end_state:(0,134,0,0,0,388393,250)|is_fec_protected:0|fec_reco_pkt_cnt:0|fec_block_size_mode:0|fst_rpr_ts:0|last_rpr_ts:0|
+[2025/04/19 03:00:11 435977] [loss_timer_updated] |scid:2bf69c005508726b|xqc_timer_unset|event_type:cancel|type:LOSS_DETECTION|
+[2025/04/19 03:00:11 436000] [connection_state_updated] |scid:2bf69c005508726b|xqc_conn_immediate_close|new:CLOSING|
+[2025/04/19 03:00:11 436166] [datagrams_sent] |scid:2bf69c005508726b|xqc_send|size:33|path_id:0|
+[2025/04/19 03:00:11 436271] [packet_sent] |scid:2bf69c005508726b|xqc_send_packet_with_pn|<==|conn:000055E518B7A93C|path_id:0|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:12|size:17|frame_flag:CONNECTION_CLOSE |sent:33|inflight:0|now:1745002811436126|stream_id:0|stream_offset:0|
+[2025/04/19 03:00:11 437595] [frames_processed] |scid:2bf69c005508726b|xqc_parse_conn_close_frame|type:18|err_code:0|
+[2025/04/19 03:00:11 437680] [connection_state_updated] |scid:2bf69c005508726b|xqc_process_conn_close_frame|new:DRAINING|
+[2025/04/19 03:00:11 437694] [packet_received] |scid:2bf69c005508726b|xqc_conn_process_packet|pkt_pns:2|pkt_type:SHORT_HEADER|pkt_num:13|len:33|frame_flag:CONNECTION_CLOSE |path_id:0|
+[2025/04/19 03:00:11 554186] [connection_state_updated] |scid:2bf69c005508726b|xqc_engine_process_conn|new:CLOSED|
+[2025/04/19 03:00:11 554340] [report] |scid:2bf69c005508726b|xqc_conn_destroy|000055E518B7A93C|has_0rtt:1|0rtt_accept:1|token_ok:-1|handshake_time:4537|first_send_delay:1809|conn_persist:225769|keyupdate_cnt:0|err:0x0|close_msg:local close|l-127.0.0.1-53110-2bf69c005508726b p-127.0.0.1-8443-3338fb009b266628|hsk_recv:4200|close_recv:109108|close_send:107555|last_recv:109013|last_send:107555|mp_enable:0|create:1|validated:1|active:1|path_info:0/0/1/a/a,1,1,1,0,0,0,0,0,0,0,18,19,19,47,0,2077,i96,4,24,33,40000,13,109,0,4,48,57,4000,11,34,0,4,48,57,4000,12,42,0,4,18,4,10,34,4,19,4,11,67,4,17,40000,12,107,0-2,0-2,0-0,0-0,0-0,0-3,0-3232,0-4223,0-11,0-19,0-0,0-0,0-0,0-0,0-0,0-0,0-0,0-0|alpn:h3|rebind_count:0|rebind_valid:0|rtx_pkt:0|tlp_pkt:0|snd_pkt:11|spurious_loss:0|detected_loss:0|max_pto:0|finished_streams:1|cli_bidi_s:1|svr_bidi_s:0|fec_exist:0|fec_ensch:NO_FEC|fec_desch:NO_FEC|fec_neg_fail:0|fec_mp_mode:NO_FEC|send_fec_pkts:0|recovered_fec_num:0|max_po_size:1200|max_probing_size:1420|ppo_size:1420|
+[2025/04/19 03:00:11 554367] [connection_closed] |scid:2bf69c005508726b|xqc_conn_destroy|err_code:0|mtu_updatad_count:0|pkt_dropped:0|
