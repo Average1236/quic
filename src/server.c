@@ -10,7 +10,7 @@ xqc_mini_svr_datagram_send(xqc_mini_svr_user_conn_t *user_conn)
         return;
     }
 
-    user_dgram_blk_t *dgram_blk = user_conn->dgram_blk;
+    server_user_dgram_blk_t *dgram_blk = user_conn->dgram_blk;
     int ret;
 
     if (user_conn->dgram_send_multiple == 1) {

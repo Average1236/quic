@@ -3,6 +3,119 @@
 #include <netdb.h>
 
 void
+xqc_mini_cli_datagram_send(xqc_mini_cli_user_conn_t *user_conn)
+{
+    if (user_conn->dgram_not_supported) {
+        // exit
+        printf("[dgram]|peer_does_not_support_datagram|\n");
+        xqc_conn_close(user_conn->ctx->engine, &user_conn->cid);
+        return;
+    }
+
+    // // try to send 0rtt datagram while the client does not have 0rtt transport parameters
+    // if (g_test_case == 202) {
+    //     if (user_conn->dgram_mss == 0) {
+    //         user_conn->dgram_mss = 1000;
+    //     }
+    // }
+
+    if (user_conn->dgram_mss == 0) {
+        user_conn->dgram_retry_in_hs_cb = 1;
+        printf("[dgram]|waiting_for_max_datagram_frame_size_from_peer|please_retry_in_hs_callback|\n");
+        return;
+    }
+
+    client_user_dgram_blk_t *dgram_blk = user_conn->dgram_blk;
+    int ret;
+
+    if (user_conn->dgram_send_multiple == 1) {
+        // if (g_test_case == 203 && user_conn->dgram_mss) {
+        //     g_test_case = -1;
+        //     user_conn->dgram_mss++;
+        // }
+        uint64_t dgram_id;
+        while (dgram_blk->data_sent < dgram_blk->data_len) {
+            size_t dgram_size = dgram_blk->data_len - dgram_blk->data_sent;
+            if (dgram_size > user_conn->dgram_mss) {
+                dgram_size = user_conn->dgram_mss;
+            }
+            dgram_blk->data[dgram_blk->data_sent] = 0x31;
+            ret = xqc_datagram_send(user_conn->quic_conn, dgram_blk->data + dgram_blk->data_sent, dgram_size, &dgram_id, user_conn->dgram_qos_level);
+            if (ret == -XQC_EAGAIN) {
+                printf("[dgram]|retry_datagram_send_later|\n");
+                return;
+            } else if (ret == -XQC_EDGRAM_TOO_LARGE) {
+                printf("[dgram]|trying_to_send_an_oversized_datagram|recorded_mss:%zu|send_size:%zu|current_mss:%zu|\n", user_conn->dgram_mss, dgram_size, xqc_datagram_get_mss(user_conn->quic_conn));
+                xqc_conn_close(user_conn->ctx->engine, &user_conn->cid);
+                return;
+            } else if (ret < 0) {
+                printf("[dgram]|send_datagram_error|err_code:%d|\n", ret);
+                xqc_conn_close(user_conn->ctx->engine, &user_conn->cid);
+                return;
+            }
+            // printf("[dgram]|send_one_datagram|id:%"PRIu64"|size:%zu|\n", dgram_id, dgram_size);
+            dgram_blk->data_sent += dgram_size;
+        }
+    } else if (user_conn->dgram_send_multiple == 1) {
+        struct iovec iov[XQC_DGRAM_BATCH_SZ];
+        uint64_t dgram_id_list[XQC_DGRAM_BATCH_SZ];
+        size_t bytes_in_batch = 0;
+        int batch_cnt = 0;
+        while ((dgram_blk->data_sent + bytes_in_batch) < dgram_blk->data_len) {
+            // if (batch_cnt == 1) {
+            //     if (g_test_case == 203 && user_conn->dgram_mss) {
+            //         g_test_case = -1;
+            //         user_conn->dgram_mss++;
+            //     }
+            // }
+            size_t dgram_size = dgram_blk->data_len - dgram_blk->data_sent - bytes_in_batch;
+            size_t succ_sent = 0, succ_sent_bytes = 0;
+            if (dgram_size > user_conn->dgram_mss) {
+                dgram_size = user_conn->dgram_mss;
+            }
+            iov[batch_cnt].iov_base = dgram_blk->data + dgram_blk->data_sent + bytes_in_batch;
+            iov[batch_cnt].iov_len = dgram_size;
+            dgram_blk->data[dgram_blk->data_sent + bytes_in_batch] = 0x31;
+            bytes_in_batch += dgram_size;
+            batch_cnt++;
+            if ((bytes_in_batch + dgram_blk->data_sent) == dgram_blk->data_len
+                || batch_cnt == XQC_DGRAM_BATCH_SZ) 
+            {
+                ret = xqc_datagram_send_multiple(user_conn->quic_conn, iov, dgram_id_list, batch_cnt, &succ_sent, &succ_sent_bytes, user_conn->dgram_qos_level);
+                if (ret == -XQC_EDGRAM_TOO_LARGE) {
+                    printf("[dgram]|trying_to_send_an_oversized_datagram|recorded_mss:%zu|send_size:%zu|current_mss:%zu|\n", user_conn->dgram_mss, iov[succ_sent].iov_len, xqc_datagram_get_mss(user_conn->quic_conn));
+                    printf("[dgram]|partially_sent_pkts_in_a_batch|cnt:%zu|\n", succ_sent);
+                    xqc_conn_close(user_conn->ctx->engine, &user_conn->cid);
+                    return;
+
+                } else if (ret < 0 && ret != -XQC_EAGAIN) {
+                    printf("[dgram]|send_datagram_multiple_error|err_code:%d|\n", ret);
+                    xqc_conn_close(user_conn->ctx->engine, &user_conn->cid);
+                    return;
+                }
+
+                // for (int i = 0; i < succ_sent; i++) {
+                //     printf("[dgram]|send_one_datagram|id:%"PRIu64"|size:%zu|\n", dgram_id_list[i], iov[i].iov_len);
+                // }
+
+                // printf("[dgram]|datagrams_sent_in_a_batch|cnt:%zu|size:%zu|\n", succ_sent, succ_sent_bytes);
+                
+                dgram_blk->data_sent += succ_sent_bytes;
+                
+                if (ret == -XQC_EAGAIN) {
+                    printf("[dgram]|retry_datagram_send_multiple_later|\n");
+                    return;
+                }
+
+                bytes_in_batch = 0;
+                batch_cnt = 0;
+            }
+        }
+
+    }
+}
+
+void
 xqc_mini_cli_init_engine_ssl_config(xqc_engine_ssl_config_t *ssl_cfg, xqc_mini_cli_args_t *args)
 {
     ssl_cfg->ciphers = args->quic_cfg.ciphers;
@@ -226,6 +339,34 @@ xqc_mini_cli_init_alpn_ctx(xqc_mini_cli_ctx_t *ctx)
     ret = xqc_h3_ctx_init(ctx->engine, &h3_cbs);
     if (ret != XQC_OK) {
         printf("init h3 context error, ret: %d\n", ret);
+        return ret;
+    }
+
+    /* register transport callbacks */
+    xqc_app_proto_callbacks_t ap_cbs = {
+        .conn_cbs = {
+            .conn_create_notify = xqc_mini_cli_conn_create_notify,
+            .conn_close_notify = xqc_mini_cli_conn_close_notify,
+            .conn_handshake_finished = xqc_mini_cli_conn_handshake_finished,
+            .conn_ping_acked = xqc_mini_cli_conn_ping_acked_notify,
+        },
+        .stream_cbs = {
+            .stream_write_notify = xqc_client_stream_write_notify,
+            .stream_read_notify = xqc_client_stream_read_notify,
+            .stream_close_notify = xqc_client_stream_close_notify,
+        },
+        .dgram_cbs = {
+            .datagram_write_notify = xqc_mini_cli_datagram_write_callback,
+            .datagram_read_notify = xqc_mini_cli_datagram_read_callback,
+            .datagram_acked_notify = xqc_mini_cli_datagram_acked_callback,
+            .datagram_lost_notify = xqc_mini_cli_datagram_lost_callback,
+            .datagram_mss_updated_notify = xqc_mini_cli_datagram_mss_updated_callback,
+        }
+    };
+
+    ret = xqc_engine_register_alpn(ctx->engine, "transport", 9, &ap_cbs, NULL);
+    if (ret != XQC_OK) {
+        printf("register alpn error, ret: %d\n", ret);
         return ret;
     }
 

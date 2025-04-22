@@ -39,7 +39,7 @@ extern "C" {
 #define TOKEN_MAX_SIZE 8192
 #define MAX_PATH_CNT 2
 #define XQC_PACKET_BUF_LEN 1500
-
+#define XQC_DGRAM_BATCH_SZ 32
 #define SESSION_TICKET_FILE         "session_ticket"
 #define TRANSPORT_PARAMS_FILE       "transport_params"
 #define TOKEN_FILE                  "token"
@@ -157,12 +157,25 @@ typedef struct xqc_mini_cli_ctx_s {
 
     int                 log_fd;
     int                 keylog_fd;
+    int                 cur_conn_num;
 } xqc_mini_cli_ctx_t;
 
+typedef struct client_user_datagram_block_s {
+    unsigned char *recv_data;
+    unsigned char *data;
+    size_t         data_len;
+    size_t         data_sent;
+    size_t         data_recv;
+    size_t         data_lost;
+    size_t         dgram_lost;
+    uint32_t       dgram_id;
+} client_user_dgram_blk_t;
 
 typedef struct xqc_mini_cli_user_conn_s {
     xqc_cid_t               cid;
     xqc_h3_conn_t          *h3_conn;
+    xqc_connection_t   *quic_conn;
+
 
     xqc_mini_cli_ctx_t     *ctx;
 
@@ -174,8 +187,17 @@ typedef struct xqc_mini_cli_user_conn_s {
     struct sockaddr        *peer_addr;
     socklen_t               peer_addrlen;
 
+    client_user_dgram_blk_t   *dgram_blk;
+    size_t              dgram_mss;
+    uint8_t             dgram_not_supported;
+    int                 dgram_retry_in_hs_cb;
+    int                 dgram_send_multiple;    // 0: disable, 1: enable single dgram, 2: enable multiple dgram
+    int                 dgram_qos_level;
+
     struct event            *ev_socket;
     struct event            *ev_timeout;
+
+    int                 hsk_completed;
 
 } xqc_mini_cli_user_conn_t;
 
@@ -205,7 +227,7 @@ typedef struct xqc_mini_cli_user_stream_s {
 
 } xqc_mini_cli_user_stream_t;
 
-
+void xqc_mini_cli_datagram_send(xqc_mini_cli_user_conn_t *user_conn);
 
 void xqc_mini_cli_init_engine_ssl_config(xqc_engine_ssl_config_t *ssl_cfg, xqc_mini_cli_args_t *args);
 

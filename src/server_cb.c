@@ -96,7 +96,7 @@ xqc_mini_svr_conn_create_notify(xqc_connection_t *conn, const xqc_cid_t *cid, vo
     xqc_mini_svr_user_conn_t *user_conn = (xqc_mini_svr_user_conn_t*)user_data;
 
     user_conn->quic_conn = conn;
-    user_conn->dgram_blk = calloc(1, sizeof(user_dgram_blk_t));
+    user_conn->dgram_blk = calloc(1, sizeof(server_user_dgram_blk_t));
     user_conn->dgram_blk->data_recv = 0;
     user_conn->dgram_blk->data_sent = 0;
     

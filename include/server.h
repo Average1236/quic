@@ -129,7 +129,7 @@ typedef struct xqc_mini_svr_ctx_s {
     int                 keylog_fd;
 } xqc_mini_svr_ctx_t;
 
-typedef struct user_datagram_block_s {
+typedef struct server_user_datagram_block_s {
     unsigned char *data;
     size_t         data_len;
     size_t         to_send_size;
@@ -137,7 +137,7 @@ typedef struct user_datagram_block_s {
     size_t         data_recv;
     size_t         data_lost;
     size_t         dgram_lost;
-} user_dgram_blk_t;
+} server_user_dgram_blk_t;
 
 typedef struct xqc_mini_svr_user_conn_s {
     struct event           *ev_timeout;
@@ -152,7 +152,7 @@ typedef struct xqc_mini_svr_user_conn_s {
     struct sockaddr_in     *peer_addr;
     socklen_t               peer_addrlen;
 
-    user_dgram_blk_t       *dgram_blk;
+    server_user_dgram_blk_t       *dgram_blk;
     size_t                  dgram_mss;
     uint8_t                 dgram_not_supported;
     int                     dgram_send_multiple;    // 0: disable, 1: enable single dgram, 2: enable multiple dgram

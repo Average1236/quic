@@ -9,6 +9,67 @@
  * @brief engine callbacks to trigger engine main logic 
  */
 static const char *line_break = "\n";
+
+void
+xqc_mini_cli_datagram_mss_updated_callback(xqc_connection_t *conn, size_t mss, void *user_data)
+{
+    xqc_mini_cli_user_conn_t *user_conn = (xqc_mini_cli_user_conn_t*)user_data;
+    user_conn->dgram_mss = mss;
+    printf("[dgram]|mss_callback|updated_mss:%zu|\n", mss);
+}
+
+void
+xqc_mini_cli_datagram_read_callback(xqc_connection_t *conn, void *user_data, const void *data, size_t data_len, uint64_t dgram_ts)
+{
+    xqc_mini_cli_user_conn_t *user_conn = (xqc_mini_cli_user_conn_t*)user_data;
+    user_conn->dgram_blk->data_recv += data_len;
+    //printf("[dgram]|read_data|size:%zu|recv_time:%"PRIu64"|\n", data_len, dgram_ts);
+}
+
+void
+xqc_mini_cli_datagram_write_callback(xqc_connection_t *conn, void *user_data)
+{
+    xqc_mini_cli_user_conn_t *user_conn = (xqc_mini_cli_user_conn_t*)user_data;
+    if (user_conn->dgram_send_multiple) {
+        printf("[dgram]|dgram_write|\n");
+        xqc_mini_cli_datagram_send(user_conn);
+    }
+}
+
+void
+xqc_mini_cli_datagram_acked_callback(xqc_connection_t *conn, uint64_t dgram_id, void *user_data)
+{
+    xqc_mini_cli_user_conn_t *user_conn = (xqc_mini_cli_user_conn_t*)user_data;
+    printf("[dgram]|dgram_acked|dgram_id:%"PRIu64"|\n", dgram_id);
+}
+
+int
+xqc_mini_cli_datagram_lost_callback(xqc_connection_t *conn, uint64_t dgram_id, void *user_data)
+{
+    xqc_mini_cli_user_conn_t *user_conn = (xqc_mini_cli_user_conn_t*)user_data;
+    user_conn->dgram_blk->dgram_lost++;
+    printf("[dgram]|dgram_lost|dgram_id:%"PRIu64"|\n", dgram_id);
+    return 0;
+}
+
+int
+xqc_client_stream_write_notify(xqc_stream_t *stream, void *user_data)
+{
+    return 0;
+}
+
+int
+xqc_client_stream_read_notify(xqc_stream_t *stream, void *user_data)
+{
+    return 0;
+}
+
+int
+xqc_client_stream_close_notify(xqc_stream_t *stream, void *user_data)
+{
+    return 0;
+}
+
 void
 xqc_mini_cli_engine_cb(int fd, short what, void *arg)
 {
@@ -402,4 +463,74 @@ xqc_mini_cli_conn_create_notify(xqc_connection_t *conn, const xqc_cid_t *cid, vo
 
     printf("[stats] xqc_conn_is_ready_to_send_early_data:%d\n", xqc_conn_is_ready_to_send_early_data(conn));
     return XQC_OK;
+}
+
+int
+xqc_mini_cli_conn_close_notify(xqc_connection_t *conn, const xqc_cid_t *cid, void *user_data, void *conn_proto_data)
+{
+    DEBUG;
+
+    xqc_mini_cli_user_conn_t *user_conn = (xqc_mini_cli_user_conn_t *)user_data;
+
+    xqc_mini_cli_ctx_t *p_ctx;
+    p_ctx = user_conn->ctx;
+
+    xqc_int_t err = xqc_conn_get_errno(conn);
+    printf("should_clear_0rtt_ticket, conn_err:%d, clear_0rtt_ticket:%d\n", err, xqc_conn_should_clear_0rtt_ticket(err));
+
+    xqc_conn_stats_t stats = xqc_conn_get_stats(p_ctx->engine, cid);
+    printf("send_count:%u, lost_count:%u, tlp_count:%u, recv_count:%u, srtt:%"PRIu64" early_data_flag:%d, conn_err:%d, mp_state:%d, ack_info:%s, alpn:%s\n",
+           stats.send_count, stats.lost_count, stats.tlp_count, stats.recv_count, stats.srtt, stats.early_data_flag, stats.conn_err, stats.mp_state, stats.ack_info, stats.alpn);
+
+    printf("conn_info: \"%s\"\n", stats.conn_info);
+
+    printf("[dgram]|recv_dgram_bytes:%zu|sent_dgram_bytes:%zu|lost_dgram_bytes:%zu|lost_cnt:%zu|\n", 
+            user_conn->dgram_blk->data_recv, user_conn->dgram_blk->data_sent,
+            user_conn->dgram_blk->data_lost, user_conn->dgram_blk->dgram_lost);
+
+
+        if (p_ctx->cur_conn_num == 0) {
+            event_base_loopbreak(p_ctx->eb);
+        }
+
+    return 0;
+}
+
+void
+xqc_mini_cli_conn_ping_acked_notify(xqc_connection_t *conn, const xqc_cid_t *cid, void *ping_user_data, void *user_data, void *conn_proto_data)
+{
+    DEBUG;
+    if (ping_user_data) {
+        printf("====>ping_id:%d\n", *(int *) ping_user_data);
+
+    } else {
+        printf("====>no ping_id\n");
+    }
+}
+
+void
+xqc_mini_cli_conn_handshake_finished(xqc_connection_t *conn, void *user_data, void *conn_proto_data)
+{
+    DEBUG;
+    xqc_mini_cli_user_conn_t *user_conn = (xqc_mini_cli_user_conn_t *) user_data;
+        // if (!g_mp_ping_on) {
+        //     xqc_conn_send_ping(ctx.engine, &user_conn->cid, NULL);
+        //     xqc_conn_send_ping(ctx.engine, &user_conn->cid, &g_ping_id);
+        // }  
+
+    printf("====>DCID:%s\n", xqc_dcid_str_by_scid(user_conn->ctx->engine, &user_conn->cid));
+    printf("====>SCID:%s\n", xqc_scid_str(user_conn->ctx->engine, &user_conn->cid));
+
+    user_conn->hsk_completed = 1;
+
+    user_conn->dgram_mss = xqc_datagram_get_mss(conn);
+    if (user_conn->dgram_mss == 0) {
+        user_conn->dgram_not_supported = 1; 
+    }
+    
+    printf("[dgram-200]|1RTT|updated_mss:%zu|\n", user_conn->dgram_mss);
+    
+    if (user_conn->dgram_send_multiple && user_conn->dgram_retry_in_hs_cb) {
+        xqc_mini_cli_datagram_send(user_conn);
+    }
 }
